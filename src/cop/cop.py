@@ -4,6 +4,7 @@ import timeout
 import json
 
 
+@timeout(600)
 def generate_frequency_allocation_instance(fileName):
     """
     Génère une instance du problème des stations CSP et tente de trouver une solution.
@@ -13,30 +14,41 @@ def generate_frequency_allocation_instance(fileName):
     """
     with open(fileName, 'r') as file:
         data = json.load(file)
+    print(data)
 
-    # emeteurs = VarArray(size=data["station"]["emetteur"], dom=range(1, k + 1))
-    # recepeteur =
+    num_stations = len(data["stations"])
+    # regions = VarArray(size=num_stations, dom=[data["stations"][i]["region"] for i in range(num_stations)])
+    emetteurs = VarArray(size=num_stations, dom=[data["stations"][i]["emetteur"] for i in range(num_stations)])
+    recepteurs = VarArray(size=num_stations, dom=[data["stations"][i]["recepteur"] for i in range(num_stations)])
 
     satisfy(
+        [abs(emetteurs[i] - recepteurs[i]) == data["stations"]["delta"] for i in range(num_stations)],
+        [(abs(emetteurs[interference["x"]] - emetteurs[interference["y"]]) >= interference["Delta"])
+         for interference in data["interferences"]],
+
+        # Limiter le nb de stations par région
 
     )
 
     minimize(
-
+        Sum([emetteurs[i] + recepteurs[i] for i in range(num_stations)]),
+        # Maximum([regions[i], (emetteurs[i]) for i in range(num_stations)]),
+        # Sum([regions[i] * (emetteurs[i] + recepteurs[i]) for i in range(num_stations)])
     )
 
-    # Résout le problème CSP
     if solve() is SAT:
+        print(f"Solution trouvée :\nÉmetteurs: {emetteurs.values()}\nRécepteurs: {recepteurs.values()}")
         return
+
     else:
-        print("L'instance n'a pas de solution")
+        print("L'instance n'a pas de solution.")
         return "NO SOLUTION"
 
 
 def show_solution(solution):
     """
     Affiche la solution du d'allocation de fréquence COP.
-    :param solution:
+    @param solution:
     """
 
     return
