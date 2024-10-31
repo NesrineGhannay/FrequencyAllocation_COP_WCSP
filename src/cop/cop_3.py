@@ -57,8 +57,6 @@ def show_solution(es, rs):
     return
 
 
-
-
 if __name__ == "__main__":
     startTime = time.time()
     (es, rs) = generate_frequency_allocation_instance("../../donnees/donnees_cop/celar_50_7_10_5_0.800000_0.json")
