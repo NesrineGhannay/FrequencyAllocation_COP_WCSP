@@ -33,9 +33,9 @@ def generate_frequency_allocation_instance(fileName):
         ]
     )
 
-    minimize(
-        Maximum(emetteurs + recepteurs) - Minimum(emetteurs + recepteurs) # Minimisation de la largeur de la bande de fréquences
-    )
+    # minimize(
+    #     Maximum(emetteurs + recepteurs) - Minimum(emetteurs + recepteurs) # Minimisation de la largeur de la bande de fréquences
+    # )
 
     if solve() is SAT:
         es = values(emetteurs)
@@ -59,6 +59,7 @@ def show_solution(es, rs):
 
 if __name__ == "__main__":
     startTime = time.time()
-    (es, rs) = generate_frequency_allocation_instance("../../donnees/donnees_cop/celar_50_7_10_5_0.800000_0.json")
+    solution = generate_frequency_allocation_instance("../../donnees/donnees_cop/celar_50_7_10_5_0.800000_0.json")
+    es, rs = solution[0], solution[1]
     endTime = time.time()
     print(endTime - startTime, " s.")
