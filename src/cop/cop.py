@@ -1,10 +1,10 @@
 import time
 from pycsp3 import *
-import timeout
+# import timeout
 import json
 
 
-@timeout(600)
+# @timeout(600)
 def generate_frequency_allocation_instance(fileName):
     """
     Génère une instance du problème des stations CSP et tente de trouver une solution.
@@ -25,11 +25,11 @@ def generate_frequency_allocation_instance(fileName):
     for i in range(num_stations):
         freqs_dom += data["stations"][i]["emetteur"] + data["stations"][i]["recepteur"]
     freqs_dom = list(set(freqs_dom))  # occurrences uniques
-
+    print(len(freqs_dom))
     dic_freq_id = {}  # dictionnaires qui associera à chaque fréquence un indice
     for j in range(len(freqs_dom)):
         dic_freq_id[freqs_dom[j]] = j
-    print(dic_freq_id)
+    # print(dic_freq_id)
 
     # list de variables qui vérifient si une fréquence est utilisé ou pas
     is_freq_used = VarArray(size=len(freqs_dom), dom=[0, 1])
@@ -38,7 +38,10 @@ def generate_frequency_allocation_instance(fileName):
     emetteurs = VarArray(size=num_stations, dom=[data["stations"][i]["emetteur"] for i in range(num_stations)])
     recepteurs = VarArray(size=num_stations, dom=[data["stations"][i]["recepteur"] for i in range(num_stations)])
 
-    satisfy(
+    minimize_num_frequencies(emetteurs, recepteurs, is_freq_used, dic_freq_id)
+
+
+    """ satisfy(
         [abs(emetteurs[i] - recepteurs[i]) == data["stations"][i]["delta"] for i in range(num_stations)],  # manquait le i
         [(abs(emetteurs[interference["x"]] - emetteurs[interference["y"]]) >= interference["Delta"])
          for interference in data["interferences"]],
@@ -59,7 +62,7 @@ def generate_frequency_allocation_instance(fileName):
 
     else:
         print("L'instance n'a pas de solution.")
-        return "NO SOLUTION"
+        return "NO SOLUTION" """
 
 
 def show_solution(solution):
@@ -76,7 +79,6 @@ def minimize_num_frequencies(e, r, f, dic_feq_id):
     Prends deux Varray correspondant aux fréquences émettrices et récepteurs
     et retourne une solution qui minimize le nombre de fréquences utilisé
     """
-    # TODO: soit définir une nouvelle VarArray booléenne qui vaut vrai si une fréquence est utilisé et minimise la somme
 
     satisfy(
         [f[dic_feq_id[e_i]] == 1 for e_i in e],  # pas correct (génère une erreur)
