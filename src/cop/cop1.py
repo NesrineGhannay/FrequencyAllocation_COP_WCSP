@@ -16,6 +16,24 @@ def generate_frequency_allocation_instance(fileName):
         data = json.load(file)
     # print(data)
     num_stations = len(data["stations"])
+    num_regions = len(data["regions"])
+
+    freqs_dom = []
+
+    dic = {}
+    for j in range(num_regions):
+        dic[j] = []
+    for i in range(num_stations):
+        freqs_dom += data["stations"][i]["emetteur"] + data["stations"][i]["recepteur"]
+        j = data["stations"][i]["region"]
+        dic[j].append(i)
+
+    # print(dic)
+    # assert False
+    freqs_dom = list(set(freqs_dom))  # occurrences uniques
+    # print([0]+freqs_dom)
+    regions = VarArray(size=(len(data["regions"]), num_stations), dom=[0]+freqs_dom)
+
     emetteurs = VarArray(size=num_stations, dom=[data['stations'][i]['emetteur'] for i in range(num_stations)])
     recepteurs = VarArray(size=num_stations, dom=[data['stations'][i]['recepteur'] for i in range(num_stations)])
     is_used = VarArray(size=num_stations, dom=[0, 1])
@@ -36,31 +54,41 @@ def generate_frequency_allocation_instance(fileName):
             NValues([recepteurs[j] for j in range(num_stations) if data["stations"][j]["region"] == i]) <=
             data["regions"][i]
             for i in range(len(data["regions"]))
+        ],
+        [
+            regions[i][j] == emetteurs[j] for j in range(0, num_stations, 2) for i in range(num_regions) if j in dic[i]
         ]
-        # [is_used[i]==1 if emetteurs[i]==14 else 0 for i in range(num_stations)]
+
     )
 
     # Minimiser le nombre de fréquences utilisé
     """minimize(
-        NValues(emetteurs) + NValues(recepteurs)
+        NValues(regions)
     )"""
 
     if solve() is SAT:
         es = values(emetteurs)
         rs = values(recepteurs)
-        show_solution(es, rs)
+        show_solution(es, rs, dic, num_regions)
     else:
         print("L'instance n'a pas de solution.")
         return "NO SOLUTION"
 
 
-def show_solution(es, rs):
+def show_solution(es, rs, dic, num_regions):
     """
     Affiche la solution du d'allocation de fréquence COP.
     @param solution:
     """
-    for i in range(len(es)):
-        print(f"{i}: e:{es[i]}, r:{rs[i]}")
+    for j in range(num_regions):
+        print(f"\nStations : {dic[j]}")
+        print("em: ", [es[i] for i in dic[j]])
+        print("rc: ", [rs[i] for i in dic[j]])
+        print("delta:", [es[i] - rs[i] for i in dic[j]])
+        print()
+
+    """for i in range(len(es)):
+        print(f"{i}: e:{es[i]}, r:{rs[i]}")"""
 
 
 if __name__ == "__main__":
