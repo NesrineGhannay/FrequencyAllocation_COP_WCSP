@@ -62,9 +62,9 @@ def generate_frequency_allocation_instance(fileName):
     )
 
     # Minimiser le nombre de fréquences utilisé
-    """minimize(
-        NValues(regions)
-    )"""
+    minimize(
+        Sum(emetteurs + recepteurs)
+    )
 
     if solve() is SAT:
         es = values(emetteurs)
@@ -72,7 +72,6 @@ def generate_frequency_allocation_instance(fileName):
         show_solution(es, rs, dic, num_regions)
     else:
         print("L'instance n'a pas de solution.")
-        return "NO SOLUTION"
 
 
 def show_solution(es, rs, dic, num_regions):
@@ -85,7 +84,6 @@ def show_solution(es, rs, dic, num_regions):
         print("em: ", [es[i] for i in dic[j]])
         print("rc: ", [rs[i] for i in dic[j]])
         print("delta:", [es[i] - rs[i] for i in dic[j]])
-        print()
 
     """for i in range(len(es)):
         print(f"{i}: e:{es[i]}, r:{rs[i]}")"""
