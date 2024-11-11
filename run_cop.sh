@@ -13,6 +13,6 @@ fi
 for file in "$data_dir"/*; do
   if [ -f "$file" ]; then
     echo "Traitement du fichier: $file"
-    python3 src/cop/cop_freq_alloc.py "$file" --timeout 60 --problem 1
+    python3 src/cop/cop_freq_alloc.py "$file" --timeout 300 --problem 1
   fi
 done

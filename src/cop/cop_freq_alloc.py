@@ -63,30 +63,39 @@ def resolve_instance(fileName, timeout, problem):
 
     if problem == 1:
         minimize(
-            Sum(emetteurs)
+            NValues(emetteurs + recepteurs)
         )
     elif problem == 2:
-
         minimize(
-            Sum(recepteurs)
+            Sum(recepteurs + emetteurs)
         )
     else:
         minimize(
-            Sum(emetteurs)
+            abs(Maximum(emetteurs + recepteurs) - Minimum(emetteurs + recepteurs))
         )
 
-    solvers = [CHOCO, ACE]
+    """solvers = [ACE]
     for s in solvers:
-        print(f"Essai avec le solveur {s}:")
-        if solve(solver=s, options=f"-t={timeout}s") is SAT:
-            # print(NValues(regions[i] for i in range(num_regions)))
-            es = values(emetteurs)
-            rs = values(recepteurs)
-            # reg = values(regions)
-            # print([f for f, value in enumerate(values(is_used)) if value == 1])
-            show_solution(es, rs, dic, num_regions, data)
+        print(f"Essai avec le solveur {s}:")"""
+    if solve(options=f"-t={timeout}s") is OPTIMUM:
+        # print(NValues(regions[i] for i in range(num_regions)))
+        es = values(emetteurs)
+        rs = values(recepteurs)
+        # reg = values(regions)
+        # print([f for f, value in enumerate(values(is_used)) if value == 1])
+        # show_solution(es, rs, dic, num_regions, data)
+        if problem == 1:
+            unique_es = len(set(es))
+            unique_rs = len(set(rs))
+            #print(f"fonction objectif: {es}, {rs}")
+            print(f"Nombre d'occurrences uniques de es: {unique_es}")
+            print(f"Nombre d'occurrences uniques de rs: {unique_rs}")
+        elif problem == 2:
+            print(f"fonction objectif: {sum(es) + sum(rs)}")
         else:
-            print("L'instance n'a pas de solution.")
+            print(f"fonction objectif: {abs(max(es + rs) - min(es + rs))}")
+    else:
+        print(f"L'instance n'a pas de solution.{problem}")
 
 
 def show_solution(es, rs, dic, num_regions, data):
