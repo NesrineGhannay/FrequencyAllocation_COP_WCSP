@@ -1,11 +1,14 @@
+import argparse
 import time
 from pycsp3 import *
 # import timeout
 import json
+import os
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
+import signal
 
 
-# @timeout(600)
-def generate_frequency_allocation_instance(fileName):
+def resolve_instance(fileName, timeout, problem):
     """
     Génère une instance du problème des stations CSP et tente de trouver une solution.
 
@@ -32,11 +35,11 @@ def generate_frequency_allocation_instance(fileName):
     # assert False
     freqs_dom = list(set(freqs_dom))  # occurrences uniques
     # print([0]+freqs_dom)
-    regions = VarArray(size=(len(data["regions"]), num_stations), dom=[0]+freqs_dom)
+    # regions = VarArray(size=(len(data["regions"]), num_stations), dom=[0]+freqs_dom)
 
     emetteurs = VarArray(size=num_stations, dom=[data['stations'][i]['emetteur'] for i in range(num_stations)])
     recepteurs = VarArray(size=num_stations, dom=[data['stations'][i]['recepteur'] for i in range(num_stations)])
-    is_used = VarArray(size=num_stations, dom=[0, 1])
+    # is_used = VarArray(size=max(freqs_dom), dom=[0, 1])
     satisfy(
         # distance entre fréquence émettrice et réceptrice d'une station
         [abs(emetteurs[i] - recepteurs[i]) == data["stations"][i]["delta"] for i in range(num_stations)],
@@ -54,43 +57,58 @@ def generate_frequency_allocation_instance(fileName):
             NValues([recepteurs[j] for j in range(num_stations) if data["stations"][j]["region"] == i]) <=
             data["regions"][i]
             for i in range(len(data["regions"]))
-        ],
-        [
-            regions[i][j] == emetteurs[j] for j in range(0, num_stations, 2) for i in range(num_regions) if j in dic[i]
         ]
 
     )
 
-    # Minimiser le nombre de fréquences utilisé
-    minimize(
-        Sum(emetteurs + recepteurs)
-    )
+    if problem == 1:
+        minimize(
+            Sum(emetteurs)
+        )
+    elif problem == 2:
 
-    if solve() is SAT:
-        es = values(emetteurs)
-        rs = values(recepteurs)
-        show_solution(es, rs, dic, num_regions)
+        minimize(
+            Sum(recepteurs)
+        )
     else:
-        print("L'instance n'a pas de solution.")
+        minimize(
+            Sum(emetteurs)
+        )
+
+    solvers = [CHOCO, ACE]
+    for s in solvers:
+        print(f"Essai avec le solveur {s}:")
+        if solve(solver=s, options=f"-t={timeout}s") is SAT:
+            # print(NValues(regions[i] for i in range(num_regions)))
+            es = values(emetteurs)
+            rs = values(recepteurs)
+            # reg = values(regions)
+            # print([f for f, value in enumerate(values(is_used)) if value == 1])
+            show_solution(es, rs, dic, num_regions, data)
+        else:
+            print("L'instance n'a pas de solution.")
 
 
-def show_solution(es, rs, dic, num_regions):
+def show_solution(es, rs, dic, num_regions, data):
     """
     Affiche la solution du d'allocation de fréquence COP.
     @param solution:
     """
     for j in range(num_regions):
-        print(f"\nStations : {dic[j]}")
-        print("em: ", [es[i] for i in dic[j]])
-        print("rc: ", [rs[i] for i in dic[j]])
-        print("delta:", [es[i] - rs[i] for i in dic[j]])
-
-    """for i in range(len(es)):
-        print(f"{i}: e:{es[i]}, r:{rs[i]}")"""
+        print(f"\n== Région {j} ==")
+        for i in dic[j]:
+            print(f"Station {i}: em: {es[i]}, rc: {rs[i]}, delta: {es[i] - rs[i]} < {data['stations'][i]['delta']}")
+        print("")
 
 
 if __name__ == "__main__":
-    startTime = time.time()
-    generate_frequency_allocation_instance("../../donnees/donnees_cop/celar_50_7_10_5_0.800000_0.json")
-    endTime = time.time()
-    print(endTime - startTime, " s.")
+    parser = argparse.ArgumentParser(description='Process some files.')
+    parser.add_argument('file_name', type=str, help='The name of the file to process')
+    parser.add_argument('--timeout', type=int, default=60, help='The timeout for the resolution')
+    parser.add_argument("--problem", type=int, default=1, help="The problem to solve")
+
+    args = parser.parse_args()
+    file_name = args.file_name
+    timeout = args.timeout
+    problem = args.problem
+    resolve_instance(file_name, timeout, problem)
