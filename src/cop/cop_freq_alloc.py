@@ -8,12 +8,18 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError
 import signal
 
 
-def resolve_instance(fileName, timeout, problem):
+def resolve_instance(fileName, timeout, problem, solver):
     """
-    Génère une instance du problème des stations CSP et tente de trouver une solution.
+    Génère une instance du problème des stations COP et tente de trouver une solution.
 
-    : param fileName:
-    return:
+    Paramètres :
+        fileName (str) : Nom du fichier contenant les données au format JSON
+        timeout (int) : Limite de temps de résolution d'une instance
+        problem (int) : Numéro du problème à résoudre (1: minimisation du nombre de fréquence utilisées, 2: utilisation des fréquences les plus basses, 3 : minimiser la largeur de la bande de fréquence
+        solver (str) : Solver pour la résoltion de l'instance (ACE ou CHOCO)
+
+    Return :
+        None
     """
     with open(fileName, 'r') as file:
         data = json.load(file)
@@ -77,7 +83,7 @@ def resolve_instance(fileName, timeout, problem):
     """solvers = [ACE]
     for s in solvers:
         print(f"Essai avec le solveur {s}:")"""
-    if solve(options=f"-t={timeout}s") is OPTIMUM:
+    if solve(solver=solver, options=f"-t={timeout}s") is OPTIMUM:
         # print(NValues(regions[i] for i in range(num_regions)))
         es = values(emetteurs)
         rs = values(recepteurs)
@@ -100,8 +106,14 @@ def resolve_instance(fileName, timeout, problem):
 
 def show_solution(es, rs, dic, num_regions, data):
     """
-    Affiche la solution du d'allocation de fréquence COP.
-    @param solution:
+    Affiche la solution du problème d'allocation de fréquence COP.
+
+    Paramètres :
+        es (list) : Liste associant à chaque station sa fréquences émettrices
+        rs (list) : Liste associant à chaque station sa fréquences receptrices
+        dic (dict) : Dictionnaire associant à chaque région la liste des stations qui la composent
+        num_regions (int) : Nombre de régions
+        data (dict) : Dictionnaire issus de la lecture du fichier json des données d'une instance
     """
     for j in range(num_regions):
         print(f"\n== Région {j} ==")
@@ -114,10 +126,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process some files.')
     parser.add_argument('file_name', type=str, help='The name of the file to process')
     parser.add_argument('--timeout', type=int, default=60, help='The timeout for the resolution')
-    parser.add_argument("--problem", type=int, default=1, help="The problem to solve")
+    parser.add_argument("--problem", type=int, default=1, help="The problem to solve : 1, 2 or 3")
+    parser.add_argument("--solver", type=str, default="choco", help="The solver to use : ACE or CHOCO")
 
     args = parser.parse_args()
     file_name = args.file_name
     timeout = args.timeout
     problem = args.problem
-    resolve_instance(file_name, timeout, problem)
+    solver = args.solver
+    resolve_instance(file_name, timeout, problem, solver)
