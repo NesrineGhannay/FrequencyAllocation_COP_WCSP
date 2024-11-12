@@ -127,7 +127,7 @@ if __name__ == "__main__":
     parser.add_argument('file_name', type=str, help='The name of the file to process')
     parser.add_argument('--timeout', type=int, default=60, help='The timeout for the resolution')
     parser.add_argument("--problem", type=int, default=1, help="The problem to solve : 1, 2 or 3")
-    parser.add_argument("--solver", type=str, default="choco", help="The solver to use : ACE or CHOCO")
+    parser.add_argument("--solver", type=str, default="ACE", help="The solver to use : ACE or CHOCO")
 
     args = parser.parse_args()
     file_name = args.file_name
