@@ -67,7 +67,7 @@ def resolve_instance(fileName, timeout, problem, solver):
 
     )
 
-    if problem == 1:
+    if problem == 1:  # minimiser le nombre total de fréquences utilisées
         minimize(
             NValues(emetteurs + recepteurs)
         )
@@ -93,11 +93,18 @@ def resolve_instance(fileName, timeout, problem, solver):
         if problem == 1:
             unique_es = len(set(es))
             unique_rs = len(set(rs))
-            #print(f"fonction objectif: {es}, {rs}")
-            print(f"Nombre d'occurrences uniques de es: {unique_es}")
-            print(f"Nombre d'occurrences uniques de rs: {unique_rs}")
+            # print(f"fonction objectif: {es}, {rs}")
+            # print(f"Nombre d'occurrences uniques de es: {unique_es}")
+            # print(f"Nombre d'occurrences uniques de rs: {unique_rs}")
+            return unique_rs + unique_es
         elif problem == 2:
-            print(f"fonction objectif: {sum(es) + sum(rs)}")
+            # print(f"fonction objectif: {sum(es) + sum(rs)}")
+            sum = 0
+            for e in set(es):
+                sum += e
+            for r in set(rs):
+                sum += r
+            return sum
         else:
             print(f"fonction objectif: {abs(max(es + rs) - min(es + rs))}")
     else:
@@ -109,11 +116,11 @@ def show_solution(es, rs, dic, num_regions, data):
     Affiche la solution du problème d'allocation de fréquence COP.
 
     Paramètres :
-        es (list) : Liste associant à chaque station sa fréquences émettrices
-        rs (list) : Liste associant à chaque station sa fréquences receptrices
+        es (list) : Liste associant à chaque station sa fréquence émettrice
+        rs (list) : Liste associant à chaque station sa fréquence réceptrice
         dic (dict) : Dictionnaire associant à chaque région la liste des stations qui la composent
         num_regions (int) : Nombre de régions
-        data (dict) : Dictionnaire issus de la lecture du fichier json des données d'une instance
+        data (dict) : Dictionnaire issu de la lecture du fichier json des données d'une instance
     """
     for j in range(num_regions):
         print(f"\n== Région {j} ==")
@@ -134,4 +141,10 @@ if __name__ == "__main__":
     timeout = args.timeout
     problem = args.problem
     solver = args.solver
-    resolve_instance(file_name, timeout, problem, solver)
+    start_time = time.time()
+    objetif_value = resolve_instance(file_name, timeout, problem, solver)
+    duration = time.time() - start_time
+    file_name = file_name.split("/")[-1].replace("_", "\\_")
+    # print(file_name)
+    # print(f"\\hline \n"
+    #      f"{file_name} & {duration:.3f} & {objetif_value} \\\\")
