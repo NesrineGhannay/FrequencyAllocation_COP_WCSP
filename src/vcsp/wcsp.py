@@ -94,9 +94,8 @@ def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
         })
 
     with open(wcsp_file, 'w') as file:
-        file.write(f"frequency_allocation {len(variables)} {max(domains)} {len(constraints)} 1000\n")
-
-        file.write(f"{' '.join([str(d) for d in domains])}")
+        file.write(f"freq_alloc {len(variables)} {max(domains)} {len(constraints)} 1000\n")
+        file.write(f"{' '.join([str(d) for d in domains])}\n")
 
         for constraint in constraints:
             scope = ' '.join(map(str, constraint["scope"]))
