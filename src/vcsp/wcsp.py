@@ -1,4 +1,5 @@
 import json
+import pytoulbar2
 
 def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
     """
@@ -14,11 +15,21 @@ def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
     num_stations = len(data["stations"])
     interferences = data["interferences"]
 
-    variables = []
-    domains = []
     constraints = []
+    domains = []
 
+    frequencies = []
+    for i in range(num_stations):
+        frequencies += data["stations"][i]["emetteur"] + data["stations"][i]["recepteur"]
+    frequencies = list(set(frequencies))  # occurrences uniques
+    dic_freq_id = {}  # dictionnaires qui associera à chaque fréquence un indice
+    for j in range(len(frequencies)):
+        dic_freq_id[frequencies[j]] = j
+    print(dic_freq_id)
+
+    variables = []
     variable_indices = {}
+
     for i, station in enumerate(data["stations"]):
         emetteur_var = len(variables)
         recepteur_var = len(variables) + 1
@@ -27,16 +38,16 @@ def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
         variable_indices[f"recepteur_{i}"] = recepteur_var
         variables.append(emetteur_var)
         variables.append(recepteur_var)
-        domains.append(station["emetteur"])
-        domains.append(station["recepteur"])
 
-        # |emetteur - recepteur| == delta
+        domains.append(len(frequencies))
+        domains.append(len(frequencies))
+
         delta = station["delta"]
         tuples = [
-            (e, r, 0)
+            (dic_freq_id[e], dic_freq_id[r], 0)  # on utilise les indices associées aux fréquences
             for e in station["emetteur"]
             for r in station["recepteur"]
-            if abs(e - r) == delta
+            if abs(e - r) >= delta
         ]
         constraints.append({
             "arity": 2,
@@ -54,9 +65,9 @@ def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
         emetteur_y = variable_indices[f"emetteur_{y}"]
 
         tuples = [
-            (ex, ey, 0)
-            for ex in domains[emetteur_x]
-            for ey in domains[emetteur_y]
+            (dic_freq_id[ex], dic_freq_id[ey], 0)
+            for ex in data["stations"][x]["emetteur"]
+            for ey in data["stations"][y]["emetteur"]
             if abs(ex - ey) >= delta_min
         ]
         constraints.append({
@@ -70,23 +81,22 @@ def generate_wcsp_file(json_file, wcsp_file, max_cost=1000):
         recepteur_y = variable_indices[f"recepteur_{y}"]
 
         tuples = [
-            (rx, ry, 0)
-            for rx in domains[recepteur_x]
-            for ry in domains[recepteur_y]
+            (dic_freq_id[rx], dic_freq_id[ry], 0)
+            for rx in data["stations"][x]["emetteur"]
+            for ry in data["stations"][y]["emetteur"]
             if abs(rx - ry) >= delta_min
         ]
         constraints.append({
             "arity": 2,
             "scope": [recepteur_x, recepteur_y],
-            "default_cost": max_cost,
+            "default_cost": delta_min,
             "tuples": tuples,
         })
 
     with open(wcsp_file, 'w') as file:
-        file.write(f"frequency_allocation {len(variables)} {max(len(d) for d in domains)} {len(constraints)} 1000\n")
+        file.write(f"frequency_allocation {len(variables)} {max(domains)} {len(constraints)} 1000\n")
 
-        for domain in domains:
-            file.write(f"{len(domain)} {' '.join(map(str, domain))}\n")
+        file.write(f"{' '.join([str(d) for d in domains])}")
 
         for constraint in constraints:
             scope = ' '.join(map(str, constraint["scope"]))
