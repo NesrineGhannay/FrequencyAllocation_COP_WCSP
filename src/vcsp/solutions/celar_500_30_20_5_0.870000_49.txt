@@ -1,0 +1,1 @@
+Temps d'exécution dépassé (600 secondes). Résolution interrompue.
