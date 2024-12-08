@@ -21,19 +21,7 @@ class WCSPProblem:
         self.variables = []
         self.variable_indices = {}
 
-    def _get_evaluation_cost(self, violation):
-        """
-        Calcule le coût en fonction de la violation et de la fonction d'évaluation choisie.
-        """
-        if self.evaluation_function == "proportional":
-            return violation
-        elif self.evaluation_function == "quadratic":
-            return violation ** 2
-        elif self.evaluation_function == "constant":
-            return 1
-        else:
-            raise ValueError(f"Fonction d'évaluation inconnue : {self.evaluation_function}")
-
+    
     def generate_wcsp_file(self):
         """
         Génère un fichier WCSP à partir des données JSON.
@@ -45,13 +33,16 @@ class WCSPProblem:
         interferences = data["interferences"]
         liaisons = data["liaisons"]
 
+        # Calculs des couts
+        self.max_cost = 10 * len(data["stations"])
+        liaisons_cost = int(0.2 * self.max_cost)
+        print("Coût maximal autorisé : ", self.max_cost)
+
         frequencies = []
         for i in range(num_stations):
             frequencies += data["stations"][i]["emetteur"] + data["stations"][i]["recepteur"]
         frequencies = list(set(frequencies))
         self.dic_freq_id = {freq: idx for idx, freq in enumerate(frequencies)}
-        print(f"Fichier : {self.json_file}")
-        print(f"Fréquences uniques : {frequencies}")
         print(f"Dictionnaire d'indices : {self.dic_freq_id}")
 
         # Contraintes de matériel
@@ -95,8 +86,8 @@ class WCSPProblem:
             for ex in data["stations"][x]["emetteur"]:
                 for ey in data["stations"][y]["emetteur"]:
                     if abs(ex - ey) < delta_min:
-                        violation_cost = abs(delta_min - abs(ex - ey))
-                        tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ey],violation_cost))
+                        violation_cost = int(0.1 * self.max_cost * abs(delta_min - abs(ex - ey))) 
+                        tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ey], violation_cost))
                     else:
                         tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ey], 0))
 
@@ -112,7 +103,7 @@ class WCSPProblem:
             for rx in data["stations"][x]["recepteur"]:
                 for ry in data["stations"][y]["recepteur"]:
                     if abs(rx - ry) < delta_min:
-                        violation_cost = abs(delta_min - abs(rx - ry))
+                        violation_cost = int(0.1 * self.max_cost * abs(delta_min - abs(rx - ry)))
                         tuples.append((self.dic_freq_id[rx], self.dic_freq_id[ry], violation_cost))
                     else:
                         tuples.append((self.dic_freq_id[rx], self.dic_freq_id[ry], 0))
@@ -135,8 +126,7 @@ class WCSPProblem:
             for ex in data["stations"][x]["emetteur"]:
                 for ry in data["stations"][y]["recepteur"]:
                     if ex != ry:
-                        violation_cost = 50
-                        tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ry], violation_cost))
+                        tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ry], liaisons_cost))
                     else:
                         tuples.append((self.dic_freq_id[ex], self.dic_freq_id[ry], 0))
 
