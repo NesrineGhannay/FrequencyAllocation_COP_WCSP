@@ -35,7 +35,7 @@ Ce projet explore des méthodes avancées pour résoudre des problèmes d'**allo
     - **`scop_freq_alloc.py`** : Script principal pour modéliser et résoudre les instances COP.
   Il faut noter que les solutions contenues dans les répertoires listés précédemment ont été obtenues en utilisant le solveur ACE
   - **`vcsp/`** : Dossier où se trouve le code nécessaire pour modéliser et résoudre les instances WCSP, ainsi que les fichiers générés pour et par Toulbar2.
-    - **`solutions/`** : Répertoire où se trouve le résultat de chaque résolution faites avec WCSP.
+    - **`solutions/`** : Répertoire où se trouve le résultat de chaque résolution obtenue avec WCSP.
     - **`instances/`** : Répertoire contenant les instances au format WCSP générées par le script `wcsp.py` pour la résolution par Toolbar2.
     - **`wcsp.py`** : Script Python pour générer et résoudre les instances WCSP avec la bibliothèque `pytoulbar2`.
 
@@ -88,7 +88,10 @@ Pour résoudre une instance du problème en utilisant le format WCSP :
 
 ## **Références**  
 
-- **Toulbar2** : [https://github.com/toulbar2/toulbar2](https://github.com/toulbar2/toulbar2)   
+- [Handbook of Constraint Programming. F. Rossi, P. van Beek et T. Walsh. Elsevier, 2006.](https://www.elsevier.com/books/handbook-of-constraint-programming/rossi/978-0-444-52726-4)
+- [pytoulbar2.MultiCFN Documentation](https://toulbar2.github.io/toulbar2/ref/ref_python.html#pytoulbar2.MultiCFN)
+- [toulbar2 GitHub Repository](https://github.com/toulbar2/toulbar2)
 - **PyCSP3** : [https://pycsp.org/](https://pycsp.org/)
+
 
 ---  
