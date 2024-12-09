@@ -1,0 +1,743 @@
+<instance format="XCSP3" type="COP">
+  <variables>
+    <array id="emetteurs" note="Définition des variables du problème" size="[250]"> 14 28 42 56 70 84 98 112 126 140 154 168 182 196 210 224 238 252 266 280 294 308 322 336 350 364 378 392 406 420 434 448 462 476 490 504 518 532 546 560 574 588 602 616 630 644 658 672 686 700 714 728 </array>
+    <array id="recepteurs" size="[250]" as="emetteurs"/>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[50]">
+      <domain for="aux_gb[0..1] aux_gb[34..35] aux_gb[40..41]"> 1..7 </domain>
+      <domain for="aux_gb[2..3] aux_gb[22..23] aux_gb[28..29]"> 1..15 </domain>
+      <domain for="aux_gb[4..5] aux_gb[42..43]"> 1..3 </domain>
+      <domain for="aux_gb[6..7] aux_gb[20..21] aux_gb[30..31]"> 1..9 </domain>
+      <domain for="aux_gb[8] aux_gb[9]"> 1..6 </domain>
+      <domain for="aux_gb[10] aux_gb[11]"> 1..5 </domain>
+      <domain for="aux_gb[12] aux_gb[13]"> 1..8 </domain>
+      <domain for="aux_gb[14] aux_gb[15]"> 1..14 </domain>
+      <domain for="aux_gb[16] aux_gb[17]"> 1..11 </domain>
+      <domain for="aux_gb[18..19] aux_gb[32..33]"> 1..10 </domain>
+      <domain for="aux_gb[24..25] aux_gb[38..39] aux_gb[44..45] aux_gb[48..49]"> 1..12 </domain>
+      <domain for="aux_gb[26..27] aux_gb[36..37] aux_gb[46..47]"> 1..13 </domain>
+    </array>
+  </variables>
+  <constraints>
+    <group note="distance entre fréquence émettrice et réceptrice d'une station">
+      <intension> eq(dist(%0,%1),182) </intension>
+      <args> emetteurs[0] recepteurs[0] </args>
+      <args> emetteurs[1] recepteurs[1] </args>
+      <args> emetteurs[2] recepteurs[2] </args>
+      <args> emetteurs[3] recepteurs[3] </args>
+      <args> emetteurs[4] recepteurs[4] </args>
+      <args> emetteurs[5] recepteurs[5] </args>
+      <args> emetteurs[6] recepteurs[6] </args>
+      <args> emetteurs[7] recepteurs[7] </args>
+      <args> emetteurs[8] recepteurs[8] </args>
+      <args> emetteurs[9] recepteurs[9] </args>
+      <args> emetteurs[10] recepteurs[10] </args>
+      <args> emetteurs[11] recepteurs[11] </args>
+      <args> emetteurs[12] recepteurs[12] </args>
+      <args> emetteurs[13] recepteurs[13] </args>
+      <args> emetteurs[14] recepteurs[14] </args>
+      <args> emetteurs[15] recepteurs[15] </args>
+      <args> emetteurs[16] recepteurs[16] </args>
+      <args> emetteurs[17] recepteurs[17] </args>
+      <args> emetteurs[18] recepteurs[18] </args>
+      <args> emetteurs[19] recepteurs[19] </args>
+      <args> emetteurs[20] recepteurs[20] </args>
+      <args> emetteurs[21] recepteurs[21] </args>
+      <args> emetteurs[22] recepteurs[22] </args>
+      <args> emetteurs[23] recepteurs[23] </args>
+      <args> emetteurs[24] recepteurs[24] </args>
+      <args> emetteurs[25] recepteurs[25] </args>
+      <args> emetteurs[26] recepteurs[26] </args>
+      <args> emetteurs[27] recepteurs[27] </args>
+      <args> emetteurs[28] recepteurs[28] </args>
+      <args> emetteurs[29] recepteurs[29] </args>
+      <args> emetteurs[30] recepteurs[30] </args>
+      <args> emetteurs[31] recepteurs[31] </args>
+      <args> emetteurs[32] recepteurs[32] </args>
+      <args> emetteurs[33] recepteurs[33] </args>
+      <args> emetteurs[34] recepteurs[34] </args>
+      <args> emetteurs[35] recepteurs[35] </args>
+      <args> emetteurs[36] recepteurs[36] </args>
+      <args> emetteurs[37] recepteurs[37] </args>
+      <args> emetteurs[38] recepteurs[38] </args>
+      <args> emetteurs[39] recepteurs[39] </args>
+      <args> emetteurs[40] recepteurs[40] </args>
+      <args> emetteurs[41] recepteurs[41] </args>
+      <args> emetteurs[42] recepteurs[42] </args>
+      <args> emetteurs[43] recepteurs[43] </args>
+      <args> emetteurs[44] recepteurs[44] </args>
+      <args> emetteurs[45] recepteurs[45] </args>
+      <args> emetteurs[46] recepteurs[46] </args>
+      <args> emetteurs[47] recepteurs[47] </args>
+      <args> emetteurs[48] recepteurs[48] </args>
+      <args> emetteurs[49] recepteurs[49] </args>
+      <args> emetteurs[50] recepteurs[50] </args>
+      <args> emetteurs[51] recepteurs[51] </args>
+      <args> emetteurs[52] recepteurs[52] </args>
+      <args> emetteurs[53] recepteurs[53] </args>
+      <args> emetteurs[54] recepteurs[54] </args>
+      <args> emetteurs[55] recepteurs[55] </args>
+      <args> emetteurs[56] recepteurs[56] </args>
+      <args> emetteurs[57] recepteurs[57] </args>
+      <args> emetteurs[58] recepteurs[58] </args>
+      <args> emetteurs[59] recepteurs[59] </args>
+      <args> emetteurs[60] recepteurs[60] </args>
+      <args> emetteurs[61] recepteurs[61] </args>
+      <args> emetteurs[62] recepteurs[62] </args>
+      <args> emetteurs[63] recepteurs[63] </args>
+      <args> emetteurs[64] recepteurs[64] </args>
+      <args> emetteurs[65] recepteurs[65] </args>
+      <args> emetteurs[66] recepteurs[66] </args>
+      <args> emetteurs[67] recepteurs[67] </args>
+      <args> emetteurs[68] recepteurs[68] </args>
+      <args> emetteurs[69] recepteurs[69] </args>
+      <args> emetteurs[70] recepteurs[70] </args>
+      <args> emetteurs[71] recepteurs[71] </args>
+      <args> emetteurs[72] recepteurs[72] </args>
+      <args> emetteurs[73] recepteurs[73] </args>
+      <args> emetteurs[74] recepteurs[74] </args>
+      <args> emetteurs[75] recepteurs[75] </args>
+      <args> emetteurs[76] recepteurs[76] </args>
+      <args> emetteurs[77] recepteurs[77] </args>
+      <args> emetteurs[78] recepteurs[78] </args>
+      <args> emetteurs[79] recepteurs[79] </args>
+      <args> emetteurs[80] recepteurs[80] </args>
+      <args> emetteurs[81] recepteurs[81] </args>
+      <args> emetteurs[82] recepteurs[82] </args>
+      <args> emetteurs[83] recepteurs[83] </args>
+      <args> emetteurs[84] recepteurs[84] </args>
+      <args> emetteurs[85] recepteurs[85] </args>
+      <args> emetteurs[86] recepteurs[86] </args>
+      <args> emetteurs[87] recepteurs[87] </args>
+      <args> emetteurs[88] recepteurs[88] </args>
+      <args> emetteurs[89] recepteurs[89] </args>
+      <args> emetteurs[90] recepteurs[90] </args>
+      <args> emetteurs[91] recepteurs[91] </args>
+      <args> emetteurs[92] recepteurs[92] </args>
+      <args> emetteurs[93] recepteurs[93] </args>
+      <args> emetteurs[94] recepteurs[94] </args>
+      <args> emetteurs[95] recepteurs[95] </args>
+      <args> emetteurs[96] recepteurs[96] </args>
+      <args> emetteurs[97] recepteurs[97] </args>
+      <args> emetteurs[98] recepteurs[98] </args>
+      <args> emetteurs[99] recepteurs[99] </args>
+      <args> emetteurs[100] recepteurs[100] </args>
+      <args> emetteurs[101] recepteurs[101] </args>
+      <args> emetteurs[102] recepteurs[102] </args>
+      <args> emetteurs[103] recepteurs[103] </args>
+      <args> emetteurs[104] recepteurs[104] </args>
+      <args> emetteurs[105] recepteurs[105] </args>
+      <args> emetteurs[106] recepteurs[106] </args>
+      <args> emetteurs[107] recepteurs[107] </args>
+      <args> emetteurs[108] recepteurs[108] </args>
+      <args> emetteurs[109] recepteurs[109] </args>
+      <args> emetteurs[110] recepteurs[110] </args>
+      <args> emetteurs[111] recepteurs[111] </args>
+      <args> emetteurs[112] recepteurs[112] </args>
+      <args> emetteurs[113] recepteurs[113] </args>
+      <args> emetteurs[114] recepteurs[114] </args>
+      <args> emetteurs[115] recepteurs[115] </args>
+      <args> emetteurs[116] recepteurs[116] </args>
+      <args> emetteurs[117] recepteurs[117] </args>
+      <args> emetteurs[118] recepteurs[118] </args>
+      <args> emetteurs[119] recepteurs[119] </args>
+      <args> emetteurs[120] recepteurs[120] </args>
+      <args> emetteurs[121] recepteurs[121] </args>
+      <args> emetteurs[122] recepteurs[122] </args>
+      <args> emetteurs[123] recepteurs[123] </args>
+      <args> emetteurs[124] recepteurs[124] </args>
+      <args> emetteurs[125] recepteurs[125] </args>
+      <args> emetteurs[126] recepteurs[126] </args>
+      <args> emetteurs[127] recepteurs[127] </args>
+      <args> emetteurs[128] recepteurs[128] </args>
+      <args> emetteurs[129] recepteurs[129] </args>
+      <args> emetteurs[130] recepteurs[130] </args>
+      <args> emetteurs[131] recepteurs[131] </args>
+      <args> emetteurs[132] recepteurs[132] </args>
+      <args> emetteurs[133] recepteurs[133] </args>
+      <args> emetteurs[134] recepteurs[134] </args>
+      <args> emetteurs[135] recepteurs[135] </args>
+      <args> emetteurs[136] recepteurs[136] </args>
+      <args> emetteurs[137] recepteurs[137] </args>
+      <args> emetteurs[138] recepteurs[138] </args>
+      <args> emetteurs[139] recepteurs[139] </args>
+      <args> emetteurs[140] recepteurs[140] </args>
+      <args> emetteurs[141] recepteurs[141] </args>
+      <args> emetteurs[142] recepteurs[142] </args>
+      <args> emetteurs[143] recepteurs[143] </args>
+      <args> emetteurs[144] recepteurs[144] </args>
+      <args> emetteurs[145] recepteurs[145] </args>
+      <args> emetteurs[146] recepteurs[146] </args>
+      <args> emetteurs[147] recepteurs[147] </args>
+      <args> emetteurs[148] recepteurs[148] </args>
+      <args> emetteurs[149] recepteurs[149] </args>
+      <args> emetteurs[150] recepteurs[150] </args>
+      <args> emetteurs[151] recepteurs[151] </args>
+      <args> emetteurs[152] recepteurs[152] </args>
+      <args> emetteurs[153] recepteurs[153] </args>
+      <args> emetteurs[154] recepteurs[154] </args>
+      <args> emetteurs[155] recepteurs[155] </args>
+      <args> emetteurs[156] recepteurs[156] </args>
+      <args> emetteurs[157] recepteurs[157] </args>
+      <args> emetteurs[158] recepteurs[158] </args>
+      <args> emetteurs[159] recepteurs[159] </args>
+      <args> emetteurs[160] recepteurs[160] </args>
+      <args> emetteurs[161] recepteurs[161] </args>
+      <args> emetteurs[162] recepteurs[162] </args>
+      <args> emetteurs[163] recepteurs[163] </args>
+      <args> emetteurs[164] recepteurs[164] </args>
+      <args> emetteurs[165] recepteurs[165] </args>
+      <args> emetteurs[166] recepteurs[166] </args>
+      <args> emetteurs[167] recepteurs[167] </args>
+      <args> emetteurs[168] recepteurs[168] </args>
+      <args> emetteurs[169] recepteurs[169] </args>
+      <args> emetteurs[170] recepteurs[170] </args>
+      <args> emetteurs[171] recepteurs[171] </args>
+      <args> emetteurs[172] recepteurs[172] </args>
+      <args> emetteurs[173] recepteurs[173] </args>
+      <args> emetteurs[174] recepteurs[174] </args>
+      <args> emetteurs[175] recepteurs[175] </args>
+      <args> emetteurs[176] recepteurs[176] </args>
+      <args> emetteurs[177] recepteurs[177] </args>
+      <args> emetteurs[178] recepteurs[178] </args>
+      <args> emetteurs[179] recepteurs[179] </args>
+      <args> emetteurs[180] recepteurs[180] </args>
+      <args> emetteurs[181] recepteurs[181] </args>
+      <args> emetteurs[182] recepteurs[182] </args>
+      <args> emetteurs[183] recepteurs[183] </args>
+      <args> emetteurs[184] recepteurs[184] </args>
+      <args> emetteurs[185] recepteurs[185] </args>
+      <args> emetteurs[186] recepteurs[186] </args>
+      <args> emetteurs[187] recepteurs[187] </args>
+      <args> emetteurs[188] recepteurs[188] </args>
+      <args> emetteurs[189] recepteurs[189] </args>
+      <args> emetteurs[190] recepteurs[190] </args>
+      <args> emetteurs[191] recepteurs[191] </args>
+      <args> emetteurs[192] recepteurs[192] </args>
+      <args> emetteurs[193] recepteurs[193] </args>
+      <args> emetteurs[194] recepteurs[194] </args>
+      <args> emetteurs[195] recepteurs[195] </args>
+      <args> emetteurs[196] recepteurs[196] </args>
+      <args> emetteurs[197] recepteurs[197] </args>
+      <args> emetteurs[198] recepteurs[198] </args>
+      <args> emetteurs[199] recepteurs[199] </args>
+      <args> emetteurs[200] recepteurs[200] </args>
+      <args> emetteurs[201] recepteurs[201] </args>
+      <args> emetteurs[202] recepteurs[202] </args>
+      <args> emetteurs[203] recepteurs[203] </args>
+      <args> emetteurs[204] recepteurs[204] </args>
+      <args> emetteurs[205] recepteurs[205] </args>
+      <args> emetteurs[206] recepteurs[206] </args>
+      <args> emetteurs[207] recepteurs[207] </args>
+      <args> emetteurs[208] recepteurs[208] </args>
+      <args> emetteurs[209] recepteurs[209] </args>
+      <args> emetteurs[210] recepteurs[210] </args>
+      <args> emetteurs[211] recepteurs[211] </args>
+      <args> emetteurs[212] recepteurs[212] </args>
+      <args> emetteurs[213] recepteurs[213] </args>
+      <args> emetteurs[214] recepteurs[214] </args>
+      <args> emetteurs[215] recepteurs[215] </args>
+      <args> emetteurs[216] recepteurs[216] </args>
+      <args> emetteurs[217] recepteurs[217] </args>
+      <args> emetteurs[218] recepteurs[218] </args>
+      <args> emetteurs[219] recepteurs[219] </args>
+      <args> emetteurs[220] recepteurs[220] </args>
+      <args> emetteurs[221] recepteurs[221] </args>
+      <args> emetteurs[222] recepteurs[222] </args>
+      <args> emetteurs[223] recepteurs[223] </args>
+      <args> emetteurs[224] recepteurs[224] </args>
+      <args> emetteurs[225] recepteurs[225] </args>
+      <args> emetteurs[226] recepteurs[226] </args>
+      <args> emetteurs[227] recepteurs[227] </args>
+      <args> emetteurs[228] recepteurs[228] </args>
+      <args> emetteurs[229] recepteurs[229] </args>
+      <args> emetteurs[230] recepteurs[230] </args>
+      <args> emetteurs[231] recepteurs[231] </args>
+      <args> emetteurs[232] recepteurs[232] </args>
+      <args> emetteurs[233] recepteurs[233] </args>
+      <args> emetteurs[234] recepteurs[234] </args>
+      <args> emetteurs[235] recepteurs[235] </args>
+      <args> emetteurs[236] recepteurs[236] </args>
+      <args> emetteurs[237] recepteurs[237] </args>
+      <args> emetteurs[238] recepteurs[238] </args>
+      <args> emetteurs[239] recepteurs[239] </args>
+      <args> emetteurs[240] recepteurs[240] </args>
+      <args> emetteurs[241] recepteurs[241] </args>
+      <args> emetteurs[242] recepteurs[242] </args>
+      <args> emetteurs[243] recepteurs[243] </args>
+      <args> emetteurs[244] recepteurs[244] </args>
+      <args> emetteurs[245] recepteurs[245] </args>
+      <args> emetteurs[246] recepteurs[246] </args>
+      <args> emetteurs[247] recepteurs[247] </args>
+      <args> emetteurs[248] recepteurs[248] </args>
+      <args> emetteurs[249] recepteurs[249] </args>
+    </group>
+    <group note="distance entre fréquence de station proche">
+      <intension> and(ge(dist(%0,%1),%2),ge(dist(%3,%4),%2)) </intension>
+      <args> emetteurs[0] emetteurs[144] 40 recepteurs[0] recepteurs[144] </args>
+      <args> emetteurs[2] emetteurs[208] 30 recepteurs[2] recepteurs[208] </args>
+      <args> emetteurs[3] emetteurs[180] 30 recepteurs[3] recepteurs[180] </args>
+      <args> emetteurs[3] emetteurs[14] 30 recepteurs[3] recepteurs[14] </args>
+      <args> emetteurs[4] emetteurs[207] 50 recepteurs[4] recepteurs[207] </args>
+      <args> emetteurs[5] emetteurs[59] 30 recepteurs[5] recepteurs[59] </args>
+      <args> emetteurs[5] emetteurs[23] 50 recepteurs[5] recepteurs[23] </args>
+      <args> emetteurs[5] emetteurs[60] 50 recepteurs[5] recepteurs[60] </args>
+      <args> emetteurs[5] emetteurs[240] 50 recepteurs[5] recepteurs[240] </args>
+      <args> emetteurs[5] emetteurs[172] 40 recepteurs[5] recepteurs[172] </args>
+      <args> emetteurs[5] emetteurs[11] 40 recepteurs[5] recepteurs[11] </args>
+      <args> emetteurs[6] emetteurs[201] 40 recepteurs[6] recepteurs[201] </args>
+      <args> emetteurs[7] emetteurs[183] 50 recepteurs[7] recepteurs[183] </args>
+      <args> emetteurs[7] emetteurs[107] 50 recepteurs[7] recepteurs[107] </args>
+      <args> emetteurs[8] emetteurs[135] 50 recepteurs[8] recepteurs[135] </args>
+      <args> emetteurs[9] emetteurs[240] 30 recepteurs[9] recepteurs[240] </args>
+      <args> emetteurs[9] emetteurs[172] 20 recepteurs[9] recepteurs[172] </args>
+      <args> emetteurs[9] emetteurs[11] 20 recepteurs[9] recepteurs[11] </args>
+      <args> emetteurs[10] emetteurs[187] 50 recepteurs[10] recepteurs[187] </args>
+      <args> emetteurs[10] emetteurs[80] 50 recepteurs[10] recepteurs[80] </args>
+      <args> emetteurs[10] emetteurs[211] 30 recepteurs[10] recepteurs[211] </args>
+      <args> emetteurs[11] emetteurs[170] 50 recepteurs[11] recepteurs[170] </args>
+      <args> emetteurs[12] emetteurs[246] 20 recepteurs[12] recepteurs[246] </args>
+      <args> emetteurs[12] emetteurs[167] 40 recepteurs[12] recepteurs[167] </args>
+      <args> emetteurs[13] emetteurs[86] 20 recepteurs[13] recepteurs[86] </args>
+      <args> emetteurs[14] emetteurs[192] 40 recepteurs[14] recepteurs[192] </args>
+      <args> emetteurs[14] emetteurs[180] 30 recepteurs[14] recepteurs[180] </args>
+      <args> emetteurs[14] emetteurs[100] 50 recepteurs[14] recepteurs[100] </args>
+      <args> emetteurs[14] emetteurs[93] 30 recepteurs[14] recepteurs[93] </args>
+      <args> emetteurs[15] emetteurs[186] 20 recepteurs[15] recepteurs[186] </args>
+      <args> emetteurs[15] emetteurs[44] 50 recepteurs[15] recepteurs[44] </args>
+      <args> emetteurs[16] emetteurs[220] 30 recepteurs[16] recepteurs[220] </args>
+      <args> emetteurs[16] emetteurs[151] 50 recepteurs[16] recepteurs[151] </args>
+      <args> emetteurs[16] emetteurs[98] 20 recepteurs[16] recepteurs[98] </args>
+      <args> emetteurs[17] emetteurs[142] 20 recepteurs[17] recepteurs[142] </args>
+      <args> emetteurs[17] emetteurs[217] 30 recepteurs[17] recepteurs[217] </args>
+      <args> emetteurs[18] emetteurs[204] 50 recepteurs[18] recepteurs[204] </args>
+      <args> emetteurs[19] emetteurs[69] 50 recepteurs[19] recepteurs[69] </args>
+      <args> emetteurs[19] emetteurs[181] 40 recepteurs[19] recepteurs[181] </args>
+      <args> emetteurs[20] emetteurs[128] 20 recepteurs[20] recepteurs[128] </args>
+      <args> emetteurs[20] emetteurs[197] 20 recepteurs[20] recepteurs[197] </args>
+      <args> emetteurs[21] emetteurs[134] 50 recepteurs[21] recepteurs[134] </args>
+      <args> emetteurs[21] emetteurs[137] 20 recepteurs[21] recepteurs[137] </args>
+      <args> emetteurs[22] emetteurs[169] 30 recepteurs[22] recepteurs[169] </args>
+      <args> emetteurs[23] emetteurs[59] 20 recepteurs[23] recepteurs[59] </args>
+      <args> emetteurs[24] emetteurs[196] 20 recepteurs[24] recepteurs[196] </args>
+      <args> emetteurs[25] emetteurs[101] 50 recepteurs[25] recepteurs[101] </args>
+      <args> emetteurs[25] emetteurs[189] 20 recepteurs[25] recepteurs[189] </args>
+      <args> emetteurs[25] emetteurs[140] 20 recepteurs[25] recepteurs[140] </args>
+      <args> emetteurs[26] emetteurs[49] 40 recepteurs[26] recepteurs[49] </args>
+      <args> emetteurs[26] emetteurs[212] 30 recepteurs[26] recepteurs[212] </args>
+      <args> emetteurs[27] emetteurs[201] 20 recepteurs[27] recepteurs[201] </args>
+      <args> emetteurs[27] emetteurs[112] 20 recepteurs[27] recepteurs[112] </args>
+      <args> emetteurs[28] emetteurs[223] 50 recepteurs[28] recepteurs[223] </args>
+      <args> emetteurs[29] emetteurs[120] 30 recepteurs[29] recepteurs[120] </args>
+      <args> emetteurs[29] emetteurs[32] 30 recepteurs[29] recepteurs[32] </args>
+      <args> emetteurs[29] emetteurs[141] 40 recepteurs[29] recepteurs[141] </args>
+      <args> emetteurs[29] emetteurs[116] 30 recepteurs[29] recepteurs[116] </args>
+      <args> emetteurs[29] emetteurs[37] 30 recepteurs[29] recepteurs[37] </args>
+      <args> emetteurs[30] emetteurs[216] 50 recepteurs[30] recepteurs[216] </args>
+      <args> emetteurs[31] emetteurs[131] 20 recepteurs[31] recepteurs[131] </args>
+      <args> emetteurs[31] emetteurs[34] 20 recepteurs[31] recepteurs[34] </args>
+      <args> emetteurs[31] emetteurs[116] 30 recepteurs[31] recepteurs[116] </args>
+      <args> emetteurs[32] emetteurs[120] 30 recepteurs[32] recepteurs[120] </args>
+      <args> emetteurs[33] emetteurs[242] 30 recepteurs[33] recepteurs[242] </args>
+      <args> emetteurs[33] emetteurs[162] 20 recepteurs[33] recepteurs[162] </args>
+      <args> emetteurs[33] emetteurs[98] 30 recepteurs[33] recepteurs[98] </args>
+      <args> emetteurs[34] emetteurs[120] 30 recepteurs[34] recepteurs[120] </args>
+      <args> emetteurs[34] emetteurs[233] 30 recepteurs[34] recepteurs[233] </args>
+      <args> emetteurs[35] emetteurs[184] 30 recepteurs[35] recepteurs[184] </args>
+      <args> emetteurs[36] emetteurs[245] 20 recepteurs[36] recepteurs[245] </args>
+      <args> emetteurs[37] emetteurs[136] 30 recepteurs[37] recepteurs[136] </args>
+      <args> emetteurs[37] emetteurs[117] 40 recepteurs[37] recepteurs[117] </args>
+      <args> emetteurs[37] emetteurs[155] 30 recepteurs[37] recepteurs[155] </args>
+      <args> emetteurs[37] emetteurs[237] 40 recepteurs[37] recepteurs[237] </args>
+      <args> emetteurs[37] emetteurs[173] 50 recepteurs[37] recepteurs[173] </args>
+      <args> emetteurs[37] emetteurs[148] 50 recepteurs[37] recepteurs[148] </args>
+      <args> emetteurs[37] emetteurs[113] 30 recepteurs[37] recepteurs[113] </args>
+      <args> emetteurs[37] emetteurs[194] 40 recepteurs[37] recepteurs[194] </args>
+      <args> emetteurs[37] emetteurs[225] 40 recepteurs[37] recepteurs[225] </args>
+      <args> emetteurs[37] emetteurs[45] 20 recepteurs[37] recepteurs[45] </args>
+      <args> emetteurs[37] emetteurs[206] 20 recepteurs[37] recepteurs[206] </args>
+      <args> emetteurs[37] emetteurs[104] 30 recepteurs[37] recepteurs[104] </args>
+      <args> emetteurs[38] emetteurs[248] 50 recepteurs[38] recepteurs[248] </args>
+      <args> emetteurs[38] emetteurs[218] 50 recepteurs[38] recepteurs[218] </args>
+      <args> emetteurs[39] emetteurs[61] 30 recepteurs[39] recepteurs[61] </args>
+      <args> emetteurs[40] emetteurs[184] 40 recepteurs[40] recepteurs[184] </args>
+      <args> emetteurs[41] emetteurs[243] 30 recepteurs[41] recepteurs[243] </args>
+      <args> emetteurs[42] emetteurs[92] 20 recepteurs[42] recepteurs[92] </args>
+      <args> emetteurs[43] emetteurs[202] 20 recepteurs[43] recepteurs[202] </args>
+      <args> emetteurs[43] emetteurs[176] 20 recepteurs[43] recepteurs[176] </args>
+      <args> emetteurs[43] emetteurs[224] 40 recepteurs[43] recepteurs[224] </args>
+      <args> emetteurs[43] emetteurs[166] 20 recepteurs[43] recepteurs[166] </args>
+      <args> emetteurs[44] emetteurs[186] 30 recepteurs[44] recepteurs[186] </args>
+      <args> emetteurs[45] emetteurs[74] 50 recepteurs[45] recepteurs[74] </args>
+      <args> emetteurs[45] emetteurs[123] 50 recepteurs[45] recepteurs[123] </args>
+      <args> emetteurs[46] emetteurs[153] 50 recepteurs[46] recepteurs[153] </args>
+      <args> emetteurs[47] emetteurs[227] 40 recepteurs[47] recepteurs[227] </args>
+      <args> emetteurs[47] emetteurs[138] 40 recepteurs[47] recepteurs[138] </args>
+      <args> emetteurs[47] emetteurs[246] 40 recepteurs[47] recepteurs[246] </args>
+      <args> emetteurs[47] emetteurs[110] 40 recepteurs[47] recepteurs[110] </args>
+      <args> emetteurs[48] emetteurs[57] 30 recepteurs[48] recepteurs[57] </args>
+      <args> emetteurs[48] emetteurs[72] 50 recepteurs[48] recepteurs[72] </args>
+      <args> emetteurs[48] emetteurs[216] 40 recepteurs[48] recepteurs[216] </args>
+      <args> emetteurs[49] emetteurs[66] 40 recepteurs[49] recepteurs[66] </args>
+      <args> emetteurs[49] emetteurs[130] 30 recepteurs[49] recepteurs[130] </args>
+      <args> emetteurs[49] emetteurs[75] 20 recepteurs[49] recepteurs[75] </args>
+      <args> emetteurs[49] emetteurs[91] 50 recepteurs[49] recepteurs[91] </args>
+      <args> emetteurs[50] emetteurs[206] 30 recepteurs[50] recepteurs[206] </args>
+      <args> emetteurs[51] emetteurs[111] 40 recepteurs[51] recepteurs[111] </args>
+      <args> emetteurs[51] emetteurs[107] 50 recepteurs[51] recepteurs[107] </args>
+      <args> emetteurs[52] emetteurs[151] 40 recepteurs[52] recepteurs[151] </args>
+      <args> emetteurs[53] emetteurs[113] 50 recepteurs[53] recepteurs[113] </args>
+      <args> emetteurs[54] emetteurs[228] 40 recepteurs[54] recepteurs[228] </args>
+      <args> emetteurs[55] emetteurs[191] 50 recepteurs[55] recepteurs[191] </args>
+      <args> emetteurs[55] emetteurs[74] 30 recepteurs[55] recepteurs[74] </args>
+      <args> emetteurs[55] emetteurs[162] 40 recepteurs[55] recepteurs[162] </args>
+      <args> emetteurs[56] emetteurs[198] 40 recepteurs[56] recepteurs[198] </args>
+      <args> emetteurs[56] emetteurs[115] 30 recepteurs[56] recepteurs[115] </args>
+      <args> emetteurs[57] emetteurs[70] 50 recepteurs[57] recepteurs[70] </args>
+      <args> emetteurs[58] emetteurs[81] 20 recepteurs[58] recepteurs[81] </args>
+      <args> emetteurs[58] emetteurs[225] 50 recepteurs[58] recepteurs[225] </args>
+      <args> emetteurs[58] emetteurs[140] 40 recepteurs[58] recepteurs[140] </args>
+      <args> emetteurs[58] emetteurs[236] 30 recepteurs[58] recepteurs[236] </args>
+      <args> emetteurs[58] emetteurs[243] 30 recepteurs[58] recepteurs[243] </args>
+      <args> emetteurs[60] emetteurs[240] 50 recepteurs[60] recepteurs[240] </args>
+      <args> emetteurs[60] emetteurs[128] 20 recepteurs[60] recepteurs[128] </args>
+      <args> emetteurs[60] emetteurs[150] 50 recepteurs[60] recepteurs[150] </args>
+      <args> emetteurs[60] emetteurs[170] 20 recepteurs[60] recepteurs[170] </args>
+      <args> emetteurs[60] emetteurs[197] 30 recepteurs[60] recepteurs[197] </args>
+      <args> emetteurs[60] emetteurs[208] 50 recepteurs[60] recepteurs[208] </args>
+      <args> emetteurs[61] emetteurs[78] 20 recepteurs[61] recepteurs[78] </args>
+      <args> emetteurs[61] emetteurs[247] 20 recepteurs[61] recepteurs[247] </args>
+      <args> emetteurs[61] emetteurs[127] 50 recepteurs[61] recepteurs[127] </args>
+      <args> emetteurs[61] emetteurs[104] 30 recepteurs[61] recepteurs[104] </args>
+      <args> emetteurs[63] emetteurs[168] 50 recepteurs[63] recepteurs[168] </args>
+      <args> emetteurs[63] emetteurs[217] 30 recepteurs[63] recepteurs[217] </args>
+      <args> emetteurs[65] emetteurs[232] 50 recepteurs[65] recepteurs[232] </args>
+      <args> emetteurs[65] emetteurs[244] 50 recepteurs[65] recepteurs[244] </args>
+      <args> emetteurs[66] emetteurs[217] 20 recepteurs[66] recepteurs[217] </args>
+      <args> emetteurs[66] emetteurs[218] 20 recepteurs[66] recepteurs[218] </args>
+      <args> emetteurs[66] emetteurs[190] 20 recepteurs[66] recepteurs[190] </args>
+      <args> emetteurs[67] emetteurs[159] 40 recepteurs[67] recepteurs[159] </args>
+      <args> emetteurs[67] emetteurs[244] 50 recepteurs[67] recepteurs[244] </args>
+      <args> emetteurs[68] emetteurs[213] 40 recepteurs[68] recepteurs[213] </args>
+      <args> emetteurs[69] emetteurs[188] 30 recepteurs[69] recepteurs[188] </args>
+      <args> emetteurs[69] emetteurs[83] 20 recepteurs[69] recepteurs[83] </args>
+      <args> emetteurs[70] emetteurs[114] 30 recepteurs[70] recepteurs[114] </args>
+      <args> emetteurs[70] emetteurs[156] 30 recepteurs[70] recepteurs[156] </args>
+      <args> emetteurs[71] emetteurs[236] 40 recepteurs[71] recepteurs[236] </args>
+      <args> emetteurs[73] emetteurs[105] 20 recepteurs[73] recepteurs[105] </args>
+      <args> emetteurs[73] emetteurs[235] 20 recepteurs[73] recepteurs[235] </args>
+      <args> emetteurs[73] emetteurs[137] 30 recepteurs[73] recepteurs[137] </args>
+      <args> emetteurs[74] emetteurs[157] 20 recepteurs[74] recepteurs[157] </args>
+      <args> emetteurs[75] emetteurs[223] 40 recepteurs[75] recepteurs[223] </args>
+      <args> emetteurs[76] emetteurs[118] 40 recepteurs[76] recepteurs[118] </args>
+      <args> emetteurs[77] emetteurs[227] 40 recepteurs[77] recepteurs[227] </args>
+      <args> emetteurs[78] emetteurs[232] 20 recepteurs[78] recepteurs[232] </args>
+      <args> emetteurs[78] emetteurs[163] 50 recepteurs[78] recepteurs[163] </args>
+      <args> emetteurs[79] emetteurs[86] 30 recepteurs[79] recepteurs[86] </args>
+      <args> emetteurs[81] emetteurs[206] 50 recepteurs[81] recepteurs[206] </args>
+      <args> emetteurs[82] emetteurs[247] 40 recepteurs[82] recepteurs[247] </args>
+      <args> emetteurs[82] emetteurs[104] 30 recepteurs[82] recepteurs[104] </args>
+      <args> emetteurs[83] emetteurs[239] 20 recepteurs[83] recepteurs[239] </args>
+      <args> emetteurs[83] emetteurs[223] 30 recepteurs[83] recepteurs[223] </args>
+      <args> emetteurs[84] emetteurs[162] 50 recepteurs[84] recepteurs[162] </args>
+      <args> emetteurs[84] emetteurs[212] 30 recepteurs[84] recepteurs[212] </args>
+      <args> emetteurs[85] emetteurs[86] 20 recepteurs[85] recepteurs[86] </args>
+      <args> emetteurs[85] emetteurs[211] 30 recepteurs[85] recepteurs[211] </args>
+      <args> emetteurs[86] emetteurs[211] 50 recepteurs[86] recepteurs[211] </args>
+      <args> emetteurs[87] emetteurs[227] 50 recepteurs[87] recepteurs[227] </args>
+      <args> emetteurs[87] emetteurs[122] 30 recepteurs[87] recepteurs[122] </args>
+      <args> emetteurs[88] emetteurs[216] 50 recepteurs[88] recepteurs[216] </args>
+      <args> emetteurs[89] emetteurs[157] 40 recepteurs[89] recepteurs[157] </args>
+      <args> emetteurs[89] emetteurs[112] 40 recepteurs[89] recepteurs[112] </args>
+      <args> emetteurs[89] emetteurs[162] 20 recepteurs[89] recepteurs[162] </args>
+      <args> emetteurs[89] emetteurs[214] 50 recepteurs[89] recepteurs[214] </args>
+      <args> emetteurs[90] emetteurs[188] 30 recepteurs[90] recepteurs[188] </args>
+      <args> emetteurs[90] emetteurs[181] 20 recepteurs[90] recepteurs[181] </args>
+      <args> emetteurs[91] emetteurs[133] 50 recepteurs[91] recepteurs[133] </args>
+      <args> emetteurs[92] emetteurs[238] 40 recepteurs[92] recepteurs[238] </args>
+      <args> emetteurs[94] emetteurs[173] 40 recepteurs[94] recepteurs[173] </args>
+      <args> emetteurs[94] emetteurs[178] 30 recepteurs[94] recepteurs[178] </args>
+      <args> emetteurs[95] emetteurs[155] 20 recepteurs[95] recepteurs[155] </args>
+      <args> emetteurs[96] emetteurs[131] 50 recepteurs[96] recepteurs[131] </args>
+      <args> emetteurs[97] emetteurs[145] 40 recepteurs[97] recepteurs[145] </args>
+      <args> emetteurs[97] emetteurs[142] 40 recepteurs[97] recepteurs[142] </args>
+      <args> emetteurs[98] emetteurs[101] 30 recepteurs[98] recepteurs[101] </args>
+      <args> emetteurs[98] emetteurs[225] 30 recepteurs[98] recepteurs[225] </args>
+      <args> emetteurs[98] emetteurs[104] 20 recepteurs[98] recepteurs[104] </args>
+      <args> emetteurs[99] emetteurs[239] 20 recepteurs[99] recepteurs[239] </args>
+      <args> emetteurs[100] emetteurs[167] 40 recepteurs[100] recepteurs[167] </args>
+      <args> emetteurs[100] emetteurs[205] 50 recepteurs[100] recepteurs[205] </args>
+      <args> emetteurs[102] emetteurs[154] 50 recepteurs[102] recepteurs[154] </args>
+      <args> emetteurs[103] emetteurs[211] 20 recepteurs[103] recepteurs[211] </args>
+      <args> emetteurs[104] emetteurs[235] 20 recepteurs[104] recepteurs[235] </args>
+      <args> emetteurs[104] emetteurs[166] 20 recepteurs[104] recepteurs[166] </args>
+      <args> emetteurs[104] emetteurs[182] 50 recepteurs[104] recepteurs[182] </args>
+      <args> emetteurs[104] emetteurs[225] 20 recepteurs[104] recepteurs[225] </args>
+      <args> emetteurs[104] emetteurs[243] 20 recepteurs[104] recepteurs[243] </args>
+      <args> emetteurs[106] emetteurs[115] 50 recepteurs[106] recepteurs[115] </args>
+      <args> emetteurs[106] emetteurs[179] 30 recepteurs[106] recepteurs[179] </args>
+      <args> emetteurs[107] emetteurs[156] 40 recepteurs[107] recepteurs[156] </args>
+      <args> emetteurs[107] emetteurs[184] 30 recepteurs[107] recepteurs[184] </args>
+      <args> emetteurs[108] emetteurs[203] 50 recepteurs[108] recepteurs[203] </args>
+      <args> emetteurs[108] emetteurs[197] 50 recepteurs[108] recepteurs[197] </args>
+      <args> emetteurs[108] emetteurs[193] 30 recepteurs[108] recepteurs[193] </args>
+      <args> emetteurs[108] emetteurs[118] 40 recepteurs[108] recepteurs[118] </args>
+      <args> emetteurs[108] emetteurs[230] 50 recepteurs[108] recepteurs[230] </args>
+      <args> emetteurs[108] emetteurs[132] 50 recepteurs[108] recepteurs[132] </args>
+      <args> emetteurs[108] emetteurs[208] 20 recepteurs[108] recepteurs[208] </args>
+      <args> emetteurs[108] emetteurs[218] 50 recepteurs[108] recepteurs[218] </args>
+      <args> emetteurs[108] emetteurs[238] 30 recepteurs[108] recepteurs[238] </args>
+      <args> emetteurs[108] emetteurs[130] 30 recepteurs[108] recepteurs[130] </args>
+      <args> emetteurs[108] emetteurs[196] 20 recepteurs[108] recepteurs[196] </args>
+      <args> emetteurs[108] emetteurs[211] 30 recepteurs[108] recepteurs[211] </args>
+      <args> emetteurs[108] emetteurs[153] 20 recepteurs[108] recepteurs[153] </args>
+      <args> emetteurs[108] emetteurs[223] 50 recepteurs[108] recepteurs[223] </args>
+      <args> emetteurs[109] emetteurs[179] 40 recepteurs[109] recepteurs[179] </args>
+      <args> emetteurs[109] emetteurs[223] 50 recepteurs[109] recepteurs[223] </args>
+      <args> emetteurs[110] emetteurs[192] 20 recepteurs[110] recepteurs[192] </args>
+      <args> emetteurs[111] emetteurs[184] 40 recepteurs[111] recepteurs[184] </args>
+      <args> emetteurs[111] emetteurs[216] 40 recepteurs[111] recepteurs[216] </args>
+      <args> emetteurs[112] emetteurs[226] 40 recepteurs[112] recepteurs[226] </args>
+      <args> emetteurs[112] emetteurs[212] 30 recepteurs[112] recepteurs[212] </args>
+      <args> emetteurs[113] emetteurs[126] 30 recepteurs[113] recepteurs[126] </args>
+      <args> emetteurs[113] emetteurs[158] 50 recepteurs[113] recepteurs[158] </args>
+      <args> emetteurs[114] emetteurs[139] 30 recepteurs[114] recepteurs[139] </args>
+      <args> emetteurs[114] emetteurs[184] 20 recepteurs[114] recepteurs[184] </args>
+      <args> emetteurs[115] emetteurs[161] 30 recepteurs[115] recepteurs[161] </args>
+      <args> emetteurs[116] emetteurs[215] 20 recepteurs[116] recepteurs[215] </args>
+      <args> emetteurs[116] emetteurs[227] 50 recepteurs[116] recepteurs[227] </args>
+      <args> emetteurs[116] emetteurs[131] 20 recepteurs[116] recepteurs[131] </args>
+      <args> emetteurs[118] emetteurs[121] 40 recepteurs[118] recepteurs[121] </args>
+      <args> emetteurs[118] emetteurs[223] 30 recepteurs[118] recepteurs[223] </args>
+      <args> emetteurs[119] emetteurs[212] 20 recepteurs[119] recepteurs[212] </args>
+      <args> emetteurs[120] emetteurs[131] 40 recepteurs[120] recepteurs[131] </args>
+      <args> emetteurs[120] emetteurs[195] 50 recepteurs[120] recepteurs[195] </args>
+      <args> emetteurs[121] emetteurs[144] 20 recepteurs[121] recepteurs[144] </args>
+      <args> emetteurs[121] emetteurs[230] 50 recepteurs[121] recepteurs[230] </args>
+      <args> emetteurs[125] emetteurs[238] 50 recepteurs[125] recepteurs[238] </args>
+      <args> emetteurs[126] emetteurs[174] 20 recepteurs[126] recepteurs[174] </args>
+      <args> emetteurs[127] emetteurs[159] 20 recepteurs[127] recepteurs[159] </args>
+      <args> emetteurs[127] emetteurs[232] 30 recepteurs[127] recepteurs[232] </args>
+      <args> emetteurs[127] emetteurs[206] 20 recepteurs[127] recepteurs[206] </args>
+      <args> emetteurs[128] emetteurs[240] 30 recepteurs[128] recepteurs[240] </args>
+      <args> emetteurs[129] emetteurs[217] 20 recepteurs[129] recepteurs[217] </args>
+      <args> emetteurs[130] emetteurs[175] 20 recepteurs[130] recepteurs[175] </args>
+      <args> emetteurs[130] emetteurs[153] 50 recepteurs[130] recepteurs[153] </args>
+      <args> emetteurs[131] emetteurs[237] 40 recepteurs[131] recepteurs[237] </args>
+      <args> emetteurs[134] emetteurs[235] 40 recepteurs[134] recepteurs[235] </args>
+      <args> emetteurs[135] emetteurs[186] 50 recepteurs[135] recepteurs[186] </args>
+      <args> emetteurs[135] emetteurs[152] 50 recepteurs[135] recepteurs[152] </args>
+      <args> emetteurs[139] emetteurs[216] 50 recepteurs[139] recepteurs[216] </args>
+      <args> emetteurs[140] emetteurs[189] 50 recepteurs[140] recepteurs[189] </args>
+      <args> emetteurs[140] emetteurs[152] 30 recepteurs[140] recepteurs[152] </args>
+      <args> emetteurs[141] emetteurs[233] 20 recepteurs[141] recepteurs[233] </args>
+      <args> emetteurs[142] emetteurs[179] 40 recepteurs[142] recepteurs[179] </args>
+      <args> emetteurs[143] emetteurs[229] 50 recepteurs[143] recepteurs[229] </args>
+      <args> emetteurs[144] emetteurs[168] 50 recepteurs[144] recepteurs[168] </args>
+      <args> emetteurs[144] emetteurs[229] 40 recepteurs[144] recepteurs[229] </args>
+      <args> emetteurs[146] emetteurs[207] 50 recepteurs[146] recepteurs[207] </args>
+      <args> emetteurs[147] emetteurs[192] 40 recepteurs[147] recepteurs[192] </args>
+      <args> emetteurs[147] emetteurs[205] 40 recepteurs[147] recepteurs[205] </args>
+      <args> emetteurs[149] emetteurs[191] 50 recepteurs[149] recepteurs[191] </args>
+      <args> emetteurs[150] emetteurs[164] 20 recepteurs[150] recepteurs[164] </args>
+      <args> emetteurs[150] emetteurs[197] 20 recepteurs[150] recepteurs[197] </args>
+      <args> emetteurs[152] emetteurs[243] 50 recepteurs[152] recepteurs[243] </args>
+      <args> emetteurs[154] emetteurs[165] 30 recepteurs[154] recepteurs[165] </args>
+      <args> emetteurs[156] emetteurs[216] 30 recepteurs[156] recepteurs[216] </args>
+      <args> emetteurs[160] emetteurs[249] 20 recepteurs[160] recepteurs[249] </args>
+      <args> emetteurs[161] emetteurs[207] 40 recepteurs[161] recepteurs[207] </args>
+      <args> emetteurs[162] emetteurs[212] 20 recepteurs[162] recepteurs[212] </args>
+      <args> emetteurs[165] emetteurs[223] 40 recepteurs[165] recepteurs[223] </args>
+      <args> emetteurs[165] emetteurs[212] 40 recepteurs[165] recepteurs[212] </args>
+      <args> emetteurs[168] emetteurs[229] 50 recepteurs[168] recepteurs[229] </args>
+      <args> emetteurs[169] emetteurs[221] 20 recepteurs[169] recepteurs[221] </args>
+      <args> emetteurs[169] emetteurs[212] 50 recepteurs[169] recepteurs[212] </args>
+      <args> emetteurs[170] emetteurs[172] 50 recepteurs[170] recepteurs[172] </args>
+      <args> emetteurs[171] emetteurs[210] 50 recepteurs[171] recepteurs[210] </args>
+      <args> emetteurs[172] emetteurs[197] 40 recepteurs[172] recepteurs[197] </args>
+      <args> emetteurs[177] emetteurs[235] 30 recepteurs[177] recepteurs[235] </args>
+      <args> emetteurs[178] emetteurs[200] 50 recepteurs[178] recepteurs[200] </args>
+      <args> emetteurs[179] emetteurs[185] 50 recepteurs[179] recepteurs[185] </args>
+      <args> emetteurs[179] emetteurs[190] 30 recepteurs[179] recepteurs[190] </args>
+      <args> emetteurs[179] emetteurs[223] 30 recepteurs[179] recepteurs[223] </args>
+      <args> emetteurs[180] emetteurs[192] 30 recepteurs[180] recepteurs[192] </args>
+      <args> emetteurs[182] emetteurs[194] 50 recepteurs[182] recepteurs[194] </args>
+      <args> emetteurs[184] emetteurs[210] 20 recepteurs[184] recepteurs[210] </args>
+      <args> emetteurs[185] emetteurs[241] 20 recepteurs[185] recepteurs[241] </args>
+      <args> emetteurs[186] emetteurs[245] 30 recepteurs[186] recepteurs[245] </args>
+      <args> emetteurs[190] emetteurs[239] 20 recepteurs[190] recepteurs[239] </args>
+      <args> emetteurs[193] emetteurs[231] 50 recepteurs[193] recepteurs[231] </args>
+      <args> emetteurs[196] emetteurs[228] 30 recepteurs[196] recepteurs[228] </args>
+      <args> emetteurs[199] emetteurs[219] 20 recepteurs[199] recepteurs[219] </args>
+      <args> emetteurs[199] emetteurs[216] 40 recepteurs[199] recepteurs[216] </args>
+      <args> emetteurs[201] emetteurs[223] 40 recepteurs[201] recepteurs[223] </args>
+      <args> emetteurs[206] emetteurs[232] 40 recepteurs[206] recepteurs[232] </args>
+      <args> emetteurs[208] emetteurs[240] 30 recepteurs[208] recepteurs[240] </args>
+      <args> emetteurs[209] emetteurs[217] 40 recepteurs[209] recepteurs[217] </args>
+      <args> emetteurs[209] emetteurs[218] 40 recepteurs[209] recepteurs[218] </args>
+      <args> emetteurs[209] emetteurs[238] 50 recepteurs[209] recepteurs[238] </args>
+      <args> emetteurs[209] emetteurs[223] 50 recepteurs[209] recepteurs[223] </args>
+      <args> emetteurs[212] emetteurs[236] 20 recepteurs[212] recepteurs[236] </args>
+      <args> emetteurs[216] emetteurs[231] 50 recepteurs[216] recepteurs[231] </args>
+      <args> emetteurs[217] emetteurs[218] 50 recepteurs[217] recepteurs[218] </args>
+      <args> emetteurs[217] emetteurs[238] 20 recepteurs[217] recepteurs[238] </args>
+      <args> emetteurs[217] emetteurs[223] 30 recepteurs[217] recepteurs[223] </args>
+      <args> emetteurs[218] emetteurs[248] 30 recepteurs[218] recepteurs[248] </args>
+      <args> emetteurs[227] emetteurs[249] 50 recepteurs[227] recepteurs[249] </args>
+      <args> emetteurs[228] emetteurs[234] 40 recepteurs[228] recepteurs[234] </args>
+      <args> emetteurs[236] emetteurs[243] 50 recepteurs[236] recepteurs[243] </args>
+    </group>
+    <group note="limiter le nombre de fréquences utilisé par station">
+      <intension> le(add(%0,%1),%2) </intension>
+      <args> aux_gb[0] aux_gb[1] 14 </args>
+      <args> aux_gb[2] aux_gb[3] 28 </args>
+      <args> aux_gb[4] aux_gb[5] 4 </args>
+      <args> aux_gb[6] aux_gb[7] 17 </args>
+      <args> aux_gb[8] aux_gb[9] 10 </args>
+      <args> aux_gb[10] aux_gb[11] 10 </args>
+      <args> aux_gb[12] aux_gb[13] 14 </args>
+      <args> aux_gb[14] aux_gb[15] 26 </args>
+      <args> aux_gb[16] aux_gb[17] 21 </args>
+      <args> aux_gb[18] aux_gb[19] 20 </args>
+      <args> aux_gb[20] aux_gb[21] 16 </args>
+      <args> aux_gb[22] aux_gb[23] 30 </args>
+      <args> aux_gb[24] aux_gb[25] 23 </args>
+      <args> aux_gb[26] aux_gb[27] 24 </args>
+      <args> aux_gb[28] aux_gb[29] 29 </args>
+      <args> aux_gb[30] aux_gb[31] 18 </args>
+      <args> aux_gb[32] aux_gb[33] 18 </args>
+      <args> aux_gb[34] aux_gb[35] 12 </args>
+      <args> aux_gb[36] aux_gb[37] 26 </args>
+      <args> aux_gb[38] aux_gb[39] 22 </args>
+      <args> aux_gb[40] aux_gb[41] 14 </args>
+      <args> aux_gb[42] aux_gb[43] 6 </args>
+      <args> aux_gb[44] aux_gb[45] 23 </args>
+      <args> aux_gb[46] aux_gb[47] 24 </args>
+      <args> aux_gb[48] aux_gb[49] 23 </args>
+    </group>
+    <group note="liaisons entre fréquences émettrices et réceptrices">
+      <intension> eq(%0,%1) </intension>
+      <args> emetteurs[1] recepteurs[89] </args>
+      <args> emetteurs[5] recepteurs[197] </args>
+      <args> emetteurs[12] recepteurs[18] </args>
+      <args> emetteurs[13] recepteurs[223] </args>
+      <args> emetteurs[16] recepteurs[189] </args>
+      <args> emetteurs[20] recepteurs[60] </args>
+      <args> emetteurs[35] recepteurs[219] </args>
+      <args> emetteurs[38] recepteurs[229] </args>
+      <args> emetteurs[46] recepteurs[49] </args>
+      <args> emetteurs[50] recepteurs[163] </args>
+      <args> emetteurs[57] recepteurs[139] </args>
+      <args> emetteurs[58] recepteurs[220] </args>
+      <args> emetteurs[62] recepteurs[206] </args>
+      <args> emetteurs[63] recepteurs[143] </args>
+      <args> emetteurs[64] recepteurs[115] </args>
+      <args> emetteurs[74] recepteurs[89] </args>
+      <args> emetteurs[79] recepteurs[213] </args>
+      <args> emetteurs[83] recepteurs[179] </args>
+      <args> emetteurs[91] recepteurs[102] </args>
+      <args> emetteurs[94] recepteurs[96] </args>
+      <args> emetteurs[97] recepteurs[222] </args>
+      <args> emetteurs[97] recepteurs[129] </args>
+      <args> emetteurs[102] recepteurs[221] </args>
+      <args> emetteurs[104] recepteurs[232] </args>
+      <args> emetteurs[123] recepteurs[135] </args>
+      <args> emetteurs[124] recepteurs[126] </args>
+      <args> emetteurs[131] recepteurs[173] </args>
+      <args> emetteurs[157] recepteurs[201] </args>
+      <args> emetteurs[166] recepteurs[235] </args>
+      <args> emetteurs[216] recepteurs[219] </args>
+    </group>
+    <group>
+      <intension> eq(%0,%1) </intension>
+      <args> emetteurs[89] recepteurs[1] </args>
+      <args> emetteurs[197] recepteurs[5] </args>
+      <args> emetteurs[18] recepteurs[12] </args>
+      <args> emetteurs[223] recepteurs[13] </args>
+      <args> emetteurs[189] recepteurs[16] </args>
+      <args> emetteurs[60] recepteurs[20] </args>
+      <args> emetteurs[219] recepteurs[35] </args>
+      <args> emetteurs[229] recepteurs[38] </args>
+      <args> emetteurs[49] recepteurs[46] </args>
+      <args> emetteurs[163] recepteurs[50] </args>
+      <args> emetteurs[139] recepteurs[57] </args>
+      <args> emetteurs[220] recepteurs[58] </args>
+      <args> emetteurs[206] recepteurs[62] </args>
+      <args> emetteurs[143] recepteurs[63] </args>
+      <args> emetteurs[115] recepteurs[64] </args>
+      <args> emetteurs[89] recepteurs[74] </args>
+      <args> emetteurs[213] recepteurs[79] </args>
+      <args> emetteurs[179] recepteurs[83] </args>
+      <args> emetteurs[102] recepteurs[91] </args>
+      <args> emetteurs[96] recepteurs[94] </args>
+      <args> emetteurs[222] recepteurs[97] </args>
+      <args> emetteurs[129] recepteurs[97] </args>
+      <args> emetteurs[221] recepteurs[102] </args>
+      <args> emetteurs[232] recepteurs[104] </args>
+      <args> emetteurs[135] recepteurs[123] </args>
+      <args> emetteurs[126] recepteurs[124] </args>
+      <args> emetteurs[173] recepteurs[131] </args>
+      <args> emetteurs[201] recepteurs[157] </args>
+      <args> emetteurs[235] recepteurs[166] </args>
+      <args> emetteurs[219] recepteurs[216] </args>
+    </group>
+    <group>
+      <nValues>
+        <list> %... </list>
+        <condition> (eq,%0) </condition>
+      </nValues>
+      <args> aux_gb[0] emetteurs[37] emetteurs[71] emetteurs[123] emetteurs[152] emetteurs[212] emetteurs[225] emetteurs[236] </args>
+      <args> aux_gb[1] recepteurs[37] recepteurs[71] recepteurs[123] recepteurs[152] recepteurs[212] recepteurs[225] recepteurs[236] </args>
+      <args> aux_gb[2] emetteurs[3] emetteurs[12] emetteurs[14] emetteurs[18] emetteurs[93] emetteurs[100] emetteurs[110] emetteurs[138] emetteurs[147] emetteurs[167] emetteurs[180] emetteurs[192] emetteurs[204..205] emetteurs[246] </args>
+      <args> aux_gb[3] recepteurs[3] recepteurs[12] recepteurs[14] recepteurs[18] recepteurs[93] recepteurs[100] recepteurs[110] recepteurs[138] recepteurs[147] recepteurs[167] recepteurs[180] recepteurs[192] recepteurs[204..205] recepteurs[246] </args>
+      <args> aux_gb[4] emetteurs[42] emetteurs[92] emetteurs[132] </args>
+      <args> aux_gb[5] recepteurs[42] recepteurs[92] recepteurs[132] </args>
+      <args> aux_gb[6] emetteurs[8] emetteurs[15] emetteurs[36] emetteurs[41] emetteurs[44] emetteurs[135] emetteurs[186] emetteurs[243] emetteurs[245] </args>
+      <args> aux_gb[7] recepteurs[8] recepteurs[15] recepteurs[36] recepteurs[41] recepteurs[44] recepteurs[135] recepteurs[186] recepteurs[243] recepteurs[245] </args>
+      <args> aux_gb[8] emetteurs[1] emetteurs[33] emetteurs[162] emetteurs[194] emetteurs[214] emetteurs[242] </args>
+      <args> aux_gb[9] recepteurs[1] recepteurs[33] recepteurs[162] recepteurs[194] recepteurs[214] recepteurs[242] </args>
+      <args> aux_gb[10] emetteurs[95] emetteurs[136] emetteurs[155] emetteurs[178] emetteurs[200] </args>
+      <args> aux_gb[11] recepteurs[95] recepteurs[136] recepteurs[155] recepteurs[178] recepteurs[200] </args>
+      <args> aux_gb[12] emetteurs[47] emetteurs[77] emetteurs[87] emetteurs[122] emetteurs[160] emetteurs[215] emetteurs[227] emetteurs[249] </args>
+      <args> aux_gb[13] recepteurs[47] recepteurs[77] recepteurs[87] recepteurs[122] recepteurs[160] recepteurs[215] recepteurs[227] recepteurs[249] </args>
+      <args> aux_gb[14] emetteurs[27] emetteurs[45] emetteurs[55] emetteurs[74] emetteurs[84] emetteurs[89] emetteurs[112] emetteurs[119] emetteurs[149] emetteurs[157] emetteurs[182] emetteurs[191] emetteurs[201] emetteurs[226] </args>
+      <args> aux_gb[15] recepteurs[27] recepteurs[45] recepteurs[55] recepteurs[74] recepteurs[84] recepteurs[89] recepteurs[112] recepteurs[119] recepteurs[149] recepteurs[157] recepteurs[182] recepteurs[191] recepteurs[201] recepteurs[226] </args>
+      <args> aux_gb[16] emetteurs[35] emetteurs[48] emetteurs[57] emetteurs[70] emetteurs[72] emetteurs[139] emetteurs[156] emetteurs[183..184] emetteurs[199] emetteurs[219] </args>
+      <args> aux_gb[17] recepteurs[35] recepteurs[48] recepteurs[57] recepteurs[70] recepteurs[72] recepteurs[139] recepteurs[156] recepteurs[183..184] recepteurs[199] recepteurs[219] </args>
+      <args> aux_gb[18] emetteurs[4] emetteurs[64] emetteurs[88] emetteurs[115] emetteurs[146] emetteurs[161] emetteurs[193] emetteurs[207] emetteurs[216] emetteurs[231] </args>
+      <args> aux_gb[19] recepteurs[4] recepteurs[64] recepteurs[88] recepteurs[115] recepteurs[146] recepteurs[161] recepteurs[193] recepteurs[207] recepteurs[216] recepteurs[231] </args>
+      <args> aux_gb[20] emetteurs[7] emetteurs[30] emetteurs[40] emetteurs[51] emetteurs[107] emetteurs[111] emetteurs[114] emetteurs[171] emetteurs[210] </args>
+      <args> aux_gb[21] recepteurs[7] recepteurs[30] recepteurs[40] recepteurs[51] recepteurs[107] recepteurs[111] recepteurs[114] recepteurs[171] recepteurs[210] </args>
+      <args> aux_gb[22] emetteurs[39] emetteurs[50] emetteurs[61] emetteurs[65] emetteurs[67] emetteurs[78] emetteurs[82] emetteurs[104] emetteurs[127] emetteurs[159] emetteurs[163] emetteurs[206] emetteurs[232] emetteurs[244] emetteurs[247] </args>
+      <args> aux_gb[23] recepteurs[39] recepteurs[50] recepteurs[61] recepteurs[65] recepteurs[67] recepteurs[78] recepteurs[82] recepteurs[104] recepteurs[127] recepteurs[159] recepteurs[163] recepteurs[206] recepteurs[232] recepteurs[244] recepteurs[247] </args>
+      <args> aux_gb[24] emetteurs[21] emetteurs[43] emetteurs[73] emetteurs[105] emetteurs[134] emetteurs[137] emetteurs[166] emetteurs[176..177] emetteurs[202] emetteurs[224] emetteurs[235] </args>
+      <args> aux_gb[25] recepteurs[21] recepteurs[43] recepteurs[73] recepteurs[105] recepteurs[134] recepteurs[137] recepteurs[166] recepteurs[176..177] recepteurs[202] recepteurs[224] recepteurs[235] </args>
+      <args> aux_gb[26] emetteurs[10] emetteurs[13] emetteurs[24] emetteurs[28] emetteurs[68] emetteurs[79..80] emetteurs[85..86] emetteurs[103] emetteurs[187] emetteurs[211] emetteurs[213] </args>
+      <args> aux_gb[27] recepteurs[10] recepteurs[13] recepteurs[24] recepteurs[28] recepteurs[68] recepteurs[79..80] recepteurs[85..86] recepteurs[103] recepteurs[187] recepteurs[211] recepteurs[213] </args>
+      <args> aux_gb[28] emetteurs[29] emetteurs[31..32] emetteurs[34] emetteurs[94] emetteurs[96] emetteurs[116] emetteurs[120] emetteurs[131] emetteurs[141] emetteurs[148] emetteurs[173] emetteurs[195] emetteurs[233] emetteurs[237] </args>
+      <args> aux_gb[29] recepteurs[29] recepteurs[31..32] recepteurs[34] recepteurs[94] recepteurs[96] recepteurs[116] recepteurs[120] recepteurs[131] recepteurs[141] recepteurs[148] recepteurs[173] recepteurs[195] recepteurs[233] recepteurs[237] </args>
+      <args> aux_gb[30] emetteurs[66] emetteurs[83] emetteurs[99] emetteurs[109] emetteurs[125] emetteurs[190] emetteurs[209] emetteurs[238..239] </args>
+      <args> aux_gb[31] recepteurs[66] recepteurs[83] recepteurs[99] recepteurs[109] recepteurs[125] recepteurs[190] recepteurs[209] recepteurs[238..239] </args>
+      <args> aux_gb[32] emetteurs[6] emetteurs[22] emetteurs[26] emetteurs[91] emetteurs[102] emetteurs[133] emetteurs[154] emetteurs[165] emetteurs[169] emetteurs[221] </args>
+      <args> aux_gb[33] recepteurs[6] recepteurs[22] recepteurs[26] recepteurs[91] recepteurs[102] recepteurs[133] recepteurs[154] recepteurs[165] recepteurs[169] recepteurs[221] </args>
+      <args> aux_gb[34] emetteurs[17] emetteurs[97] emetteurs[129] emetteurs[142] emetteurs[145] emetteurs[217] emetteurs[222] </args>
+      <args> aux_gb[35] recepteurs[17] recepteurs[97] recepteurs[129] recepteurs[142] recepteurs[145] recepteurs[217] recepteurs[222] </args>
+      <args> aux_gb[36] emetteurs[2] emetteurs[9] emetteurs[11] emetteurs[20] emetteurs[60] emetteurs[128] emetteurs[150] emetteurs[164] emetteurs[170] emetteurs[172] emetteurs[197] emetteurs[208] emetteurs[240] </args>
+      <args> aux_gb[37] recepteurs[2] recepteurs[9] recepteurs[11] recepteurs[20] recepteurs[60] recepteurs[128] recepteurs[150] recepteurs[164] recepteurs[170] recepteurs[172] recepteurs[197] recepteurs[208] recepteurs[240] </args>
+      <args> aux_gb[38] emetteurs[16] emetteurs[25] emetteurs[52] emetteurs[58] emetteurs[62] emetteurs[81] emetteurs[98] emetteurs[101] emetteurs[140] emetteurs[151] emetteurs[189] emetteurs[220] </args>
+      <args> aux_gb[39] recepteurs[16] recepteurs[25] recepteurs[52] recepteurs[58] recepteurs[62] recepteurs[81] recepteurs[98] recepteurs[101] recepteurs[140] recepteurs[151] recepteurs[189] recepteurs[220] </args>
+      <args> aux_gb[40] emetteurs[53] emetteurs[113] emetteurs[117] emetteurs[124] emetteurs[126] emetteurs[158] emetteurs[174] </args>
+      <args> aux_gb[41] recepteurs[53] recepteurs[113] recepteurs[117] recepteurs[124] recepteurs[126] recepteurs[158] recepteurs[174] </args>
+      <args> aux_gb[42] emetteurs[5] emetteurs[23] emetteurs[59] </args>
+      <args> aux_gb[43] recepteurs[5] recepteurs[23] recepteurs[59] </args>
+      <args> aux_gb[44] emetteurs[46] emetteurs[49] emetteurs[54] emetteurs[75] emetteurs[130] emetteurs[153] emetteurs[175] emetteurs[196] emetteurs[203] emetteurs[223] emetteurs[228] emetteurs[234] </args>
+      <args> aux_gb[45] recepteurs[46] recepteurs[49] recepteurs[54] recepteurs[75] recepteurs[130] recepteurs[153] recepteurs[175] recepteurs[196] recepteurs[203] recepteurs[223] recepteurs[228] recepteurs[234] </args>
+      <args> aux_gb[46] emetteurs[0] emetteurs[38] emetteurs[63] emetteurs[76] emetteurs[118] emetteurs[121] emetteurs[143..144] emetteurs[168] emetteurs[218] emetteurs[229..230] emetteurs[248] </args>
+      <args> aux_gb[47] recepteurs[0] recepteurs[38] recepteurs[63] recepteurs[76] recepteurs[118] recepteurs[121] recepteurs[143..144] recepteurs[168] recepteurs[218] recepteurs[229..230] recepteurs[248] </args>
+      <args> aux_gb[48] emetteurs[19] emetteurs[56] emetteurs[69] emetteurs[90] emetteurs[106] emetteurs[108] emetteurs[179] emetteurs[181] emetteurs[185] emetteurs[188] emetteurs[198] emetteurs[241] </args>
+      <args> aux_gb[49] recepteurs[19] recepteurs[56] recepteurs[69] recepteurs[90] recepteurs[106] recepteurs[108] recepteurs[179] recepteurs[181] recepteurs[185] recepteurs[188] recepteurs[198] recepteurs[241] </args>
+    </group>
+  </constraints>
+  <objectives>
+    <minimize type="nValues"> emetteurs[] recepteurs[] </minimize>
+  </objectives>
+</instance>

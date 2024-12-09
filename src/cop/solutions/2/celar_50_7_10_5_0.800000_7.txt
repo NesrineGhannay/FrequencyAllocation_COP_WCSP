@@ -1,0 +1,99 @@
+Valeur de la fonction objectif: 210
+Fréquences utilisées: {196, 168, 42, 14, 210, 56}
+Durée d'exécution: 1.0054528713226318 secondes
+
+, Solveur: ACE
+Liaison entre la station 0 et la station 38
+em de 0 --> rc de 38: 14 == 14
+em de 38 --> rc de 0: 168 == 168
+
+Liaison entre la station 2 et la station 35
+em de 2 --> rc de 35: 168 == 168
+em de 35 --> rc de 2: 14 == 14
+
+Liaison entre la station 2 et la station 15
+em de 2 --> rc de 15: 168 == 168
+em de 15 --> rc de 2: 14 == 14
+
+Liaison entre la station 5 et la station 10
+em de 5 --> rc de 10: 210 == 210
+em de 10 --> rc de 5: 56 == 56
+
+Liaison entre la station 5 et la station 37
+em de 5 --> rc de 37: 210 == 210
+em de 37 --> rc de 5: 56 == 56
+
+Liaison entre la station 12 et la station 46
+em de 12 --> rc de 46: 14 == 14
+em de 46 --> rc de 12: 168 == 168
+
+Liaison entre la station 17 et la station 40
+em de 17 --> rc de 40: 14 == 14
+em de 40 --> rc de 17: 168 == 168
+
+Liaison entre la station 20 et la station 24
+em de 20 --> rc de 24: 168 == 168
+em de 24 --> rc de 20: 14 == 14
+
+Liaison entre la station 24 et la station 36
+em de 24 --> rc de 36: 14 == 14
+em de 36 --> rc de 24: 168 == 168
+
+Liaison entre la station 25 et la station 27
+em de 25 --> rc de 27: 210 == 210
+em de 27 --> rc de 25: 56 == 56
+
+Liaison entre la station 32 et la station 36
+em de 32 --> rc de 36: 14 == 14
+em de 36 --> rc de 32: 168 == 168
+
+Station 0: em: 14, rc: 168, delta: 154
+Station 1: em: 14, rc: 168, delta: 154
+Station 2: em: 168, rc: 14, delta: 154
+Station 3: em: 56, rc: 210, delta: 154
+Station 4: em: 14, rc: 168, delta: 154
+Station 5: em: 210, rc: 56, delta: 154
+Station 6: em: 14, rc: 168, delta: 154
+Station 7: em: 14, rc: 168, delta: 154
+Station 8: em: 14, rc: 168, delta: 154
+Station 9: em: 196, rc: 42, delta: 154
+Station 10: em: 56, rc: 210, delta: 154
+Station 11: em: 14, rc: 168, delta: 154
+Station 12: em: 14, rc: 168, delta: 154
+Station 13: em: 14, rc: 168, delta: 154
+Station 14: em: 42, rc: 196, delta: 154
+Station 15: em: 14, rc: 168, delta: 154
+Station 16: em: 168, rc: 14, delta: 154
+Station 17: em: 14, rc: 168, delta: 154
+Station 18: em: 56, rc: 210, delta: 154
+Station 19: em: 14, rc: 168, delta: 154
+Station 20: em: 168, rc: 14, delta: 154
+Station 21: em: 168, rc: 14, delta: 154
+Station 22: em: 168, rc: 14, delta: 154
+Station 23: em: 14, rc: 168, delta: 154
+Station 24: em: 14, rc: 168, delta: 154
+Station 25: em: 210, rc: 56, delta: 154
+Station 26: em: 168, rc: 14, delta: 154
+Station 27: em: 56, rc: 210, delta: 154
+Station 28: em: 56, rc: 210, delta: 154
+Station 29: em: 14, rc: 168, delta: 154
+Station 30: em: 14, rc: 168, delta: 154
+Station 31: em: 42, rc: 196, delta: 154
+Station 32: em: 14, rc: 168, delta: 154
+Station 33: em: 14, rc: 168, delta: 154
+Station 34: em: 56, rc: 210, delta: 154
+Station 35: em: 14, rc: 168, delta: 154
+Station 36: em: 168, rc: 14, delta: 154
+Station 37: em: 56, rc: 210, delta: 154
+Station 38: em: 168, rc: 14, delta: 154
+Station 39: em: 168, rc: 14, delta: 154
+Station 40: em: 168, rc: 14, delta: 154
+Station 41: em: 42, rc: 196, delta: 154
+Station 42: em: 210, rc: 56, delta: 154
+Station 43: em: 14, rc: 168, delta: 154
+Station 44: em: 168, rc: 14, delta: 154
+Station 45: em: 14, rc: 168, delta: 154
+Station 46: em: 168, rc: 14, delta: 154
+Station 47: em: 14, rc: 168, delta: 154
+Station 48: em: 56, rc: 210, delta: 154
+Station 49: em: 56, rc: 210, delta: 154

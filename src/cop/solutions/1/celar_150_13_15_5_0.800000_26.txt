@@ -1,0 +1,239 @@
+Valeur de la fonction objectif: 4
+Fréquences utilisées: {336, 98, 252, 14}
+Durée d'exécution: 3.1629528999328613 secondes
+
+, Solveur: ACE
+Liaison entre la station 2 et la station 120
+em de 2 --> rc de 120: 14 == 14
+em de 120 --> rc de 2: 252 == 252
+
+Liaison entre la station 13 et la station 76
+em de 13 --> rc de 76: 252 == 252
+em de 76 --> rc de 13: 14 == 14
+
+Liaison entre la station 23 et la station 34
+em de 23 --> rc de 34: 98 == 98
+em de 34 --> rc de 23: 336 == 336
+
+Liaison entre la station 26 et la station 110
+em de 26 --> rc de 110: 14 == 14
+em de 110 --> rc de 26: 252 == 252
+
+Liaison entre la station 32 et la station 118
+em de 32 --> rc de 118: 98 == 98
+em de 118 --> rc de 32: 336 == 336
+
+Liaison entre la station 36 et la station 73
+em de 36 --> rc de 73: 98 == 98
+em de 73 --> rc de 36: 336 == 336
+
+Liaison entre la station 36 et la station 135
+em de 36 --> rc de 135: 98 == 98
+em de 135 --> rc de 36: 336 == 336
+
+Liaison entre la station 39 et la station 113
+em de 39 --> rc de 113: 14 == 14
+em de 113 --> rc de 39: 252 == 252
+
+Liaison entre la station 42 et la station 74
+em de 42 --> rc de 74: 336 == 336
+em de 74 --> rc de 42: 98 == 98
+
+Liaison entre la station 43 et la station 124
+em de 43 --> rc de 124: 14 == 14
+em de 124 --> rc de 43: 252 == 252
+
+Liaison entre la station 46 et la station 59
+em de 46 --> rc de 59: 98 == 98
+em de 59 --> rc de 46: 336 == 336
+
+Liaison entre la station 53 et la station 139
+em de 53 --> rc de 139: 14 == 14
+em de 139 --> rc de 53: 252 == 252
+
+Liaison entre la station 56 et la station 144
+em de 56 --> rc de 144: 252 == 252
+em de 144 --> rc de 56: 14 == 14
+
+Liaison entre la station 65 et la station 127
+em de 65 --> rc de 127: 98 == 98
+em de 127 --> rc de 65: 336 == 336
+
+Liaison entre la station 71 et la station 79
+em de 71 --> rc de 79: 98 == 98
+em de 79 --> rc de 71: 336 == 336
+
+Liaison entre la station 79 et la station 133
+em de 79 --> rc de 133: 336 == 336
+em de 133 --> rc de 79: 98 == 98
+
+Liaison entre la station 80 et la station 120
+em de 80 --> rc de 120: 14 == 14
+em de 120 --> rc de 80: 252 == 252
+
+Liaison entre la station 82 et la station 123
+em de 82 --> rc de 123: 252 == 252
+em de 123 --> rc de 82: 14 == 14
+
+Liaison entre la station 90 et la station 110
+em de 90 --> rc de 110: 14 == 14
+em de 110 --> rc de 90: 252 == 252
+
+Liaison entre la station 91 et la station 121
+em de 91 --> rc de 121: 252 == 252
+em de 121 --> rc de 91: 14 == 14
+
+Liaison entre la station 134 et la station 135
+em de 134 --> rc de 135: 98 == 98
+em de 135 --> rc de 134: 336 == 336
+
+Station 0: em: 14, rc: 252, delta: 238
+Station 1: em: 14, rc: 252, delta: 238
+Station 2: em: 14, rc: 252, delta: 238
+Station 3: em: 14, rc: 252, delta: 238
+Station 4: em: 14, rc: 252, delta: 238
+Station 5: em: 14, rc: 252, delta: 238
+Station 6: em: 14, rc: 252, delta: 238
+Station 7: em: 14, rc: 252, delta: 238
+Station 8: em: 98, rc: 336, delta: 238
+Station 9: em: 14, rc: 252, delta: 238
+Station 10: em: 98, rc: 336, delta: 238
+Station 11: em: 14, rc: 252, delta: 238
+Station 12: em: 14, rc: 252, delta: 238
+Station 13: em: 252, rc: 14, delta: 238
+Station 14: em: 14, rc: 252, delta: 238
+Station 15: em: 14, rc: 252, delta: 238
+Station 16: em: 336, rc: 98, delta: 238
+Station 17: em: 336, rc: 98, delta: 238
+Station 18: em: 252, rc: 14, delta: 238
+Station 19: em: 14, rc: 252, delta: 238
+Station 20: em: 14, rc: 252, delta: 238
+Station 21: em: 14, rc: 252, delta: 238
+Station 22: em: 14, rc: 252, delta: 238
+Station 23: em: 98, rc: 336, delta: 238
+Station 24: em: 252, rc: 14, delta: 238
+Station 25: em: 252, rc: 14, delta: 238
+Station 26: em: 14, rc: 252, delta: 238
+Station 27: em: 14, rc: 252, delta: 238
+Station 28: em: 14, rc: 252, delta: 238
+Station 29: em: 14, rc: 252, delta: 238
+Station 30: em: 336, rc: 98, delta: 238
+Station 31: em: 14, rc: 252, delta: 238
+Station 32: em: 98, rc: 336, delta: 238
+Station 33: em: 252, rc: 14, delta: 238
+Station 34: em: 336, rc: 98, delta: 238
+Station 35: em: 252, rc: 14, delta: 238
+Station 36: em: 98, rc: 336, delta: 238
+Station 37: em: 98, rc: 336, delta: 238
+Station 38: em: 14, rc: 252, delta: 238
+Station 39: em: 14, rc: 252, delta: 238
+Station 40: em: 252, rc: 14, delta: 238
+Station 41: em: 14, rc: 252, delta: 238
+Station 42: em: 336, rc: 98, delta: 238
+Station 43: em: 14, rc: 252, delta: 238
+Station 44: em: 98, rc: 336, delta: 238
+Station 45: em: 14, rc: 252, delta: 238
+Station 46: em: 98, rc: 336, delta: 238
+Station 47: em: 14, rc: 252, delta: 238
+Station 48: em: 252, rc: 14, delta: 238
+Station 49: em: 252, rc: 14, delta: 238
+Station 50: em: 252, rc: 14, delta: 238
+Station 51: em: 14, rc: 252, delta: 238
+Station 52: em: 252, rc: 14, delta: 238
+Station 53: em: 14, rc: 252, delta: 238
+Station 54: em: 252, rc: 14, delta: 238
+Station 55: em: 336, rc: 98, delta: 238
+Station 56: em: 252, rc: 14, delta: 238
+Station 57: em: 98, rc: 336, delta: 238
+Station 58: em: 336, rc: 98, delta: 238
+Station 59: em: 336, rc: 98, delta: 238
+Station 60: em: 252, rc: 14, delta: 238
+Station 61: em: 252, rc: 14, delta: 238
+Station 62: em: 336, rc: 98, delta: 238
+Station 63: em: 252, rc: 14, delta: 238
+Station 64: em: 252, rc: 14, delta: 238
+Station 65: em: 98, rc: 336, delta: 238
+Station 66: em: 336, rc: 98, delta: 238
+Station 67: em: 252, rc: 14, delta: 238
+Station 68: em: 98, rc: 336, delta: 238
+Station 69: em: 252, rc: 14, delta: 238
+Station 70: em: 98, rc: 336, delta: 238
+Station 71: em: 98, rc: 336, delta: 238
+Station 72: em: 14, rc: 252, delta: 238
+Station 73: em: 336, rc: 98, delta: 238
+Station 74: em: 98, rc: 336, delta: 238
+Station 75: em: 14, rc: 252, delta: 238
+Station 76: em: 14, rc: 252, delta: 238
+Station 77: em: 14, rc: 252, delta: 238
+Station 78: em: 336, rc: 98, delta: 238
+Station 79: em: 336, rc: 98, delta: 238
+Station 80: em: 14, rc: 252, delta: 238
+Station 81: em: 14, rc: 252, delta: 238
+Station 82: em: 252, rc: 14, delta: 238
+Station 83: em: 252, rc: 14, delta: 238
+Station 84: em: 14, rc: 252, delta: 238
+Station 85: em: 252, rc: 14, delta: 238
+Station 86: em: 14, rc: 252, delta: 238
+Station 87: em: 252, rc: 14, delta: 238
+Station 88: em: 336, rc: 98, delta: 238
+Station 89: em: 14, rc: 252, delta: 238
+Station 90: em: 14, rc: 252, delta: 238
+Station 91: em: 252, rc: 14, delta: 238
+Station 92: em: 252, rc: 14, delta: 238
+Station 93: em: 252, rc: 14, delta: 238
+Station 94: em: 14, rc: 252, delta: 238
+Station 95: em: 98, rc: 336, delta: 238
+Station 96: em: 252, rc: 14, delta: 238
+Station 97: em: 14, rc: 252, delta: 238
+Station 98: em: 336, rc: 98, delta: 238
+Station 99: em: 252, rc: 14, delta: 238
+Station 100: em: 252, rc: 14, delta: 238
+Station 101: em: 14, rc: 252, delta: 238
+Station 102: em: 336, rc: 98, delta: 238
+Station 103: em: 14, rc: 252, delta: 238
+Station 104: em: 336, rc: 98, delta: 238
+Station 105: em: 14, rc: 252, delta: 238
+Station 106: em: 252, rc: 14, delta: 238
+Station 107: em: 252, rc: 14, delta: 238
+Station 108: em: 14, rc: 252, delta: 238
+Station 109: em: 252, rc: 14, delta: 238
+Station 110: em: 252, rc: 14, delta: 238
+Station 111: em: 336, rc: 98, delta: 238
+Station 112: em: 336, rc: 98, delta: 238
+Station 113: em: 252, rc: 14, delta: 238
+Station 114: em: 14, rc: 252, delta: 238
+Station 115: em: 14, rc: 252, delta: 238
+Station 116: em: 252, rc: 14, delta: 238
+Station 117: em: 252, rc: 14, delta: 238
+Station 118: em: 336, rc: 98, delta: 238
+Station 119: em: 336, rc: 98, delta: 238
+Station 120: em: 252, rc: 14, delta: 238
+Station 121: em: 14, rc: 252, delta: 238
+Station 122: em: 252, rc: 14, delta: 238
+Station 123: em: 14, rc: 252, delta: 238
+Station 124: em: 252, rc: 14, delta: 238
+Station 125: em: 336, rc: 98, delta: 238
+Station 126: em: 252, rc: 14, delta: 238
+Station 127: em: 336, rc: 98, delta: 238
+Station 128: em: 252, rc: 14, delta: 238
+Station 129: em: 252, rc: 14, delta: 238
+Station 130: em: 252, rc: 14, delta: 238
+Station 131: em: 14, rc: 252, delta: 238
+Station 132: em: 336, rc: 98, delta: 238
+Station 133: em: 98, rc: 336, delta: 238
+Station 134: em: 98, rc: 336, delta: 238
+Station 135: em: 336, rc: 98, delta: 238
+Station 136: em: 252, rc: 14, delta: 238
+Station 137: em: 252, rc: 14, delta: 238
+Station 138: em: 252, rc: 14, delta: 238
+Station 139: em: 252, rc: 14, delta: 238
+Station 140: em: 336, rc: 98, delta: 238
+Station 141: em: 14, rc: 252, delta: 238
+Station 142: em: 252, rc: 14, delta: 238
+Station 143: em: 252, rc: 14, delta: 238
+Station 144: em: 14, rc: 252, delta: 238
+Station 145: em: 14, rc: 252, delta: 238
+Station 146: em: 336, rc: 98, delta: 238
+Station 147: em: 98, rc: 336, delta: 238
+Station 148: em: 14, rc: 252, delta: 238
+Station 149: em: 252, rc: 14, delta: 238

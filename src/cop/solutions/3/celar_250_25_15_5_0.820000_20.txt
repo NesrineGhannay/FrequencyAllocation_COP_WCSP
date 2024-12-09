@@ -1,0 +1,359 @@
+Valeur de la fonction objectif: 238
+Fréquences utilisées: {224, 196, 70, 42, 14, 238, 56, 252}
+Durée d'exécution: 3.7342848777770996 secondes
+
+, Solveur: ACE
+Liaison entre la station 2 et la station 17
+em de 2 --> rc de 17: 14 == 14
+em de 17 --> rc de 2: 196 == 196
+
+Liaison entre la station 6 et la station 141
+em de 6 --> rc de 141: 14 == 14
+em de 141 --> rc de 6: 196 == 196
+
+Liaison entre la station 25 et la station 96
+em de 25 --> rc de 96: 14 == 14
+em de 96 --> rc de 25: 196 == 196
+
+Liaison entre la station 27 et la station 156
+em de 27 --> rc de 156: 14 == 14
+em de 156 --> rc de 27: 196 == 196
+
+Liaison entre la station 36 et la station 186
+em de 36 --> rc de 186: 56 == 56
+em de 186 --> rc de 36: 238 == 238
+
+Liaison entre la station 37 et la station 51
+em de 37 --> rc de 51: 14 == 14
+em de 51 --> rc de 37: 196 == 196
+
+Liaison entre la station 38 et la station 91
+em de 38 --> rc de 91: 14 == 14
+em de 91 --> rc de 38: 196 == 196
+
+Liaison entre la station 53 et la station 102
+em de 53 --> rc de 102: 14 == 14
+em de 102 --> rc de 53: 196 == 196
+
+Liaison entre la station 60 et la station 228
+em de 60 --> rc de 228: 14 == 14
+em de 228 --> rc de 60: 196 == 196
+
+Liaison entre la station 62 et la station 131
+em de 62 --> rc de 131: 14 == 14
+em de 131 --> rc de 62: 196 == 196
+
+Liaison entre la station 63 et la station 164
+em de 63 --> rc de 164: 56 == 56
+em de 164 --> rc de 63: 238 == 238
+
+Liaison entre la station 72 et la station 178
+em de 72 --> rc de 178: 56 == 56
+em de 178 --> rc de 72: 238 == 238
+
+Liaison entre la station 78 et la station 199
+em de 78 --> rc de 199: 70 == 70
+em de 199 --> rc de 78: 252 == 252
+
+Liaison entre la station 81 et la station 179
+em de 81 --> rc de 179: 14 == 14
+em de 179 --> rc de 81: 196 == 196
+
+Liaison entre la station 92 et la station 175
+em de 92 --> rc de 175: 14 == 14
+em de 175 --> rc de 92: 196 == 196
+
+Liaison entre la station 99 et la station 122
+em de 99 --> rc de 122: 14 == 14
+em de 122 --> rc de 99: 196 == 196
+
+Liaison entre la station 119 et la station 165
+em de 119 --> rc de 165: 42 == 42
+em de 165 --> rc de 119: 224 == 224
+
+Liaison entre la station 128 et la station 193
+em de 128 --> rc de 193: 14 == 14
+em de 193 --> rc de 128: 196 == 196
+
+Liaison entre la station 132 et la station 200
+em de 132 --> rc de 200: 70 == 70
+em de 200 --> rc de 132: 252 == 252
+
+Liaison entre la station 152 et la station 228
+em de 152 --> rc de 228: 14 == 14
+em de 228 --> rc de 152: 196 == 196
+
+Liaison entre la station 152 et la station 160
+em de 152 --> rc de 160: 14 == 14
+em de 160 --> rc de 152: 196 == 196
+
+Liaison entre la station 152 et la station 233
+em de 152 --> rc de 233: 14 == 14
+em de 233 --> rc de 152: 196 == 196
+
+Liaison entre la station 166 et la station 229
+em de 166 --> rc de 229: 196 == 196
+em de 229 --> rc de 166: 14 == 14
+
+Liaison entre la station 186 et la station 240
+em de 186 --> rc de 240: 238 == 238
+em de 240 --> rc de 186: 56 == 56
+
+Liaison entre la station 196 et la station 201
+em de 196 --> rc de 201: 14 == 14
+em de 201 --> rc de 196: 196 == 196
+
+Liaison entre la station 208 et la station 221
+em de 208 --> rc de 221: 70 == 70
+em de 221 --> rc de 208: 252 == 252
+
+Station 0: em: 14, rc: 196, delta: 182
+Station 1: em: 14, rc: 196, delta: 182
+Station 2: em: 14, rc: 196, delta: 182
+Station 3: em: 14, rc: 196, delta: 182
+Station 4: em: 14, rc: 196, delta: 182
+Station 5: em: 14, rc: 196, delta: 182
+Station 6: em: 14, rc: 196, delta: 182
+Station 7: em: 14, rc: 196, delta: 182
+Station 8: em: 14, rc: 196, delta: 182
+Station 9: em: 14, rc: 196, delta: 182
+Station 10: em: 14, rc: 196, delta: 182
+Station 11: em: 14, rc: 196, delta: 182
+Station 12: em: 14, rc: 196, delta: 182
+Station 13: em: 14, rc: 196, delta: 182
+Station 14: em: 14, rc: 196, delta: 182
+Station 15: em: 14, rc: 196, delta: 182
+Station 16: em: 14, rc: 196, delta: 182
+Station 17: em: 196, rc: 14, delta: 182
+Station 18: em: 14, rc: 196, delta: 182
+Station 19: em: 14, rc: 196, delta: 182
+Station 20: em: 14, rc: 196, delta: 182
+Station 21: em: 56, rc: 238, delta: 182
+Station 22: em: 14, rc: 196, delta: 182
+Station 23: em: 14, rc: 196, delta: 182
+Station 24: em: 14, rc: 196, delta: 182
+Station 25: em: 14, rc: 196, delta: 182
+Station 26: em: 14, rc: 196, delta: 182
+Station 27: em: 14, rc: 196, delta: 182
+Station 28: em: 14, rc: 196, delta: 182
+Station 29: em: 56, rc: 238, delta: 182
+Station 30: em: 14, rc: 196, delta: 182
+Station 31: em: 14, rc: 196, delta: 182
+Station 32: em: 14, rc: 196, delta: 182
+Station 33: em: 196, rc: 14, delta: 182
+Station 34: em: 14, rc: 196, delta: 182
+Station 35: em: 14, rc: 196, delta: 182
+Station 36: em: 56, rc: 238, delta: 182
+Station 37: em: 14, rc: 196, delta: 182
+Station 38: em: 14, rc: 196, delta: 182
+Station 39: em: 14, rc: 196, delta: 182
+Station 40: em: 14, rc: 196, delta: 182
+Station 41: em: 14, rc: 196, delta: 182
+Station 42: em: 42, rc: 224, delta: 182
+Station 43: em: 14, rc: 196, delta: 182
+Station 44: em: 14, rc: 196, delta: 182
+Station 45: em: 42, rc: 224, delta: 182
+Station 46: em: 14, rc: 196, delta: 182
+Station 47: em: 56, rc: 238, delta: 182
+Station 48: em: 14, rc: 196, delta: 182
+Station 49: em: 14, rc: 196, delta: 182
+Station 50: em: 56, rc: 238, delta: 182
+Station 51: em: 196, rc: 14, delta: 182
+Station 52: em: 14, rc: 196, delta: 182
+Station 53: em: 14, rc: 196, delta: 182
+Station 54: em: 56, rc: 238, delta: 182
+Station 55: em: 14, rc: 196, delta: 182
+Station 56: em: 56, rc: 238, delta: 182
+Station 57: em: 196, rc: 14, delta: 182
+Station 58: em: 14, rc: 196, delta: 182
+Station 59: em: 14, rc: 196, delta: 182
+Station 60: em: 14, rc: 196, delta: 182
+Station 61: em: 70, rc: 252, delta: 182
+Station 62: em: 14, rc: 196, delta: 182
+Station 63: em: 56, rc: 238, delta: 182
+Station 64: em: 14, rc: 196, delta: 182
+Station 65: em: 70, rc: 252, delta: 182
+Station 66: em: 70, rc: 252, delta: 182
+Station 67: em: 42, rc: 224, delta: 182
+Station 68: em: 14, rc: 196, delta: 182
+Station 69: em: 70, rc: 252, delta: 182
+Station 70: em: 14, rc: 196, delta: 182
+Station 71: em: 70, rc: 252, delta: 182
+Station 72: em: 56, rc: 238, delta: 182
+Station 73: em: 14, rc: 196, delta: 182
+Station 74: em: 56, rc: 238, delta: 182
+Station 75: em: 56, rc: 238, delta: 182
+Station 76: em: 14, rc: 196, delta: 182
+Station 77: em: 196, rc: 14, delta: 182
+Station 78: em: 70, rc: 252, delta: 182
+Station 79: em: 14, rc: 196, delta: 182
+Station 80: em: 196, rc: 14, delta: 182
+Station 81: em: 14, rc: 196, delta: 182
+Station 82: em: 14, rc: 196, delta: 182
+Station 83: em: 14, rc: 196, delta: 182
+Station 84: em: 14, rc: 196, delta: 182
+Station 85: em: 70, rc: 252, delta: 182
+Station 86: em: 14, rc: 196, delta: 182
+Station 87: em: 14, rc: 196, delta: 182
+Station 88: em: 42, rc: 224, delta: 182
+Station 89: em: 14, rc: 196, delta: 182
+Station 90: em: 14, rc: 196, delta: 182
+Station 91: em: 196, rc: 14, delta: 182
+Station 92: em: 14, rc: 196, delta: 182
+Station 93: em: 14, rc: 196, delta: 182
+Station 94: em: 70, rc: 252, delta: 182
+Station 95: em: 14, rc: 196, delta: 182
+Station 96: em: 196, rc: 14, delta: 182
+Station 97: em: 70, rc: 252, delta: 182
+Station 98: em: 70, rc: 252, delta: 182
+Station 99: em: 14, rc: 196, delta: 182
+Station 100: em: 14, rc: 196, delta: 182
+Station 101: em: 14, rc: 196, delta: 182
+Station 102: em: 196, rc: 14, delta: 182
+Station 103: em: 14, rc: 196, delta: 182
+Station 104: em: 14, rc: 196, delta: 182
+Station 105: em: 70, rc: 252, delta: 182
+Station 106: em: 14, rc: 196, delta: 182
+Station 107: em: 70, rc: 252, delta: 182
+Station 108: em: 14, rc: 196, delta: 182
+Station 109: em: 70, rc: 252, delta: 182
+Station 110: em: 196, rc: 14, delta: 182
+Station 111: em: 56, rc: 238, delta: 182
+Station 112: em: 14, rc: 196, delta: 182
+Station 113: em: 56, rc: 238, delta: 182
+Station 114: em: 14, rc: 196, delta: 182
+Station 115: em: 56, rc: 238, delta: 182
+Station 116: em: 14, rc: 196, delta: 182
+Station 117: em: 70, rc: 252, delta: 182
+Station 118: em: 42, rc: 224, delta: 182
+Station 119: em: 42, rc: 224, delta: 182
+Station 120: em: 14, rc: 196, delta: 182
+Station 121: em: 14, rc: 196, delta: 182
+Station 122: em: 196, rc: 14, delta: 182
+Station 123: em: 14, rc: 196, delta: 182
+Station 124: em: 42, rc: 224, delta: 182
+Station 125: em: 196, rc: 14, delta: 182
+Station 126: em: 56, rc: 238, delta: 182
+Station 127: em: 56, rc: 238, delta: 182
+Station 128: em: 14, rc: 196, delta: 182
+Station 129: em: 196, rc: 14, delta: 182
+Station 130: em: 14, rc: 196, delta: 182
+Station 131: em: 196, rc: 14, delta: 182
+Station 132: em: 70, rc: 252, delta: 182
+Station 133: em: 14, rc: 196, delta: 182
+Station 134: em: 196, rc: 14, delta: 182
+Station 135: em: 14, rc: 196, delta: 182
+Station 136: em: 14, rc: 196, delta: 182
+Station 137: em: 70, rc: 252, delta: 182
+Station 138: em: 252, rc: 70, delta: 182
+Station 139: em: 196, rc: 14, delta: 182
+Station 140: em: 14, rc: 196, delta: 182
+Station 141: em: 196, rc: 14, delta: 182
+Station 142: em: 56, rc: 238, delta: 182
+Station 143: em: 196, rc: 14, delta: 182
+Station 144: em: 56, rc: 238, delta: 182
+Station 145: em: 14, rc: 196, delta: 182
+Station 146: em: 56, rc: 238, delta: 182
+Station 147: em: 238, rc: 56, delta: 182
+Station 148: em: 70, rc: 252, delta: 182
+Station 149: em: 70, rc: 252, delta: 182
+Station 150: em: 56, rc: 238, delta: 182
+Station 151: em: 14, rc: 196, delta: 182
+Station 152: em: 14, rc: 196, delta: 182
+Station 153: em: 70, rc: 252, delta: 182
+Station 154: em: 196, rc: 14, delta: 182
+Station 155: em: 70, rc: 252, delta: 182
+Station 156: em: 196, rc: 14, delta: 182
+Station 157: em: 14, rc: 196, delta: 182
+Station 158: em: 196, rc: 14, delta: 182
+Station 159: em: 56, rc: 238, delta: 182
+Station 160: em: 196, rc: 14, delta: 182
+Station 161: em: 56, rc: 238, delta: 182
+Station 162: em: 56, rc: 238, delta: 182
+Station 163: em: 56, rc: 238, delta: 182
+Station 164: em: 238, rc: 56, delta: 182
+Station 165: em: 224, rc: 42, delta: 182
+Station 166: em: 196, rc: 14, delta: 182
+Station 167: em: 56, rc: 238, delta: 182
+Station 168: em: 56, rc: 238, delta: 182
+Station 169: em: 14, rc: 196, delta: 182
+Station 170: em: 70, rc: 252, delta: 182
+Station 171: em: 196, rc: 14, delta: 182
+Station 172: em: 196, rc: 14, delta: 182
+Station 173: em: 14, rc: 196, delta: 182
+Station 174: em: 14, rc: 196, delta: 182
+Station 175: em: 196, rc: 14, delta: 182
+Station 176: em: 56, rc: 238, delta: 182
+Station 177: em: 42, rc: 224, delta: 182
+Station 178: em: 238, rc: 56, delta: 182
+Station 179: em: 196, rc: 14, delta: 182
+Station 180: em: 252, rc: 70, delta: 182
+Station 181: em: 14, rc: 196, delta: 182
+Station 182: em: 70, rc: 252, delta: 182
+Station 183: em: 14, rc: 196, delta: 182
+Station 184: em: 56, rc: 238, delta: 182
+Station 185: em: 14, rc: 196, delta: 182
+Station 186: em: 238, rc: 56, delta: 182
+Station 187: em: 56, rc: 238, delta: 182
+Station 188: em: 196, rc: 14, delta: 182
+Station 189: em: 56, rc: 238, delta: 182
+Station 190: em: 224, rc: 42, delta: 182
+Station 191: em: 196, rc: 14, delta: 182
+Station 192: em: 56, rc: 238, delta: 182
+Station 193: em: 196, rc: 14, delta: 182
+Station 194: em: 14, rc: 196, delta: 182
+Station 195: em: 196, rc: 14, delta: 182
+Station 196: em: 14, rc: 196, delta: 182
+Station 197: em: 14, rc: 196, delta: 182
+Station 198: em: 196, rc: 14, delta: 182
+Station 199: em: 252, rc: 70, delta: 182
+Station 200: em: 252, rc: 70, delta: 182
+Station 201: em: 196, rc: 14, delta: 182
+Station 202: em: 56, rc: 238, delta: 182
+Station 203: em: 196, rc: 14, delta: 182
+Station 204: em: 70, rc: 252, delta: 182
+Station 205: em: 56, rc: 238, delta: 182
+Station 206: em: 56, rc: 238, delta: 182
+Station 207: em: 70, rc: 252, delta: 182
+Station 208: em: 70, rc: 252, delta: 182
+Station 209: em: 56, rc: 238, delta: 182
+Station 210: em: 196, rc: 14, delta: 182
+Station 211: em: 196, rc: 14, delta: 182
+Station 212: em: 196, rc: 14, delta: 182
+Station 213: em: 224, rc: 42, delta: 182
+Station 214: em: 56, rc: 238, delta: 182
+Station 215: em: 56, rc: 238, delta: 182
+Station 216: em: 196, rc: 14, delta: 182
+Station 217: em: 56, rc: 238, delta: 182
+Station 218: em: 196, rc: 14, delta: 182
+Station 219: em: 14, rc: 196, delta: 182
+Station 220: em: 196, rc: 14, delta: 182
+Station 221: em: 252, rc: 70, delta: 182
+Station 222: em: 14, rc: 196, delta: 182
+Station 223: em: 14, rc: 196, delta: 182
+Station 224: em: 196, rc: 14, delta: 182
+Station 225: em: 14, rc: 196, delta: 182
+Station 226: em: 70, rc: 252, delta: 182
+Station 227: em: 56, rc: 238, delta: 182
+Station 228: em: 196, rc: 14, delta: 182
+Station 229: em: 14, rc: 196, delta: 182
+Station 230: em: 70, rc: 252, delta: 182
+Station 231: em: 70, rc: 252, delta: 182
+Station 232: em: 14, rc: 196, delta: 182
+Station 233: em: 196, rc: 14, delta: 182
+Station 234: em: 238, rc: 56, delta: 182
+Station 235: em: 252, rc: 70, delta: 182
+Station 236: em: 14, rc: 196, delta: 182
+Station 237: em: 196, rc: 14, delta: 182
+Station 238: em: 56, rc: 238, delta: 182
+Station 239: em: 14, rc: 196, delta: 182
+Station 240: em: 56, rc: 238, delta: 182
+Station 241: em: 56, rc: 238, delta: 182
+Station 242: em: 14, rc: 196, delta: 182
+Station 243: em: 14, rc: 196, delta: 182
+Station 244: em: 14, rc: 196, delta: 182
+Station 245: em: 14, rc: 196, delta: 182
+Station 246: em: 238, rc: 56, delta: 182
+Station 247: em: 196, rc: 14, delta: 182
+Station 248: em: 56, rc: 238, delta: 182
+Station 249: em: 252, rc: 70, delta: 182

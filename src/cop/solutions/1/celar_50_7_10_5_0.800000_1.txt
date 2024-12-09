@@ -1,0 +1,83 @@
+Valeur de la fonction objectif: 4
+Fréquences utilisées: {280, 350, 84, 14}
+Durée d'exécution: 1.310122013092041 secondes
+
+, Solveur: ACE
+Liaison entre la station 0 et la station 17
+em de 0 --> rc de 17: 280 == 280
+em de 17 --> rc de 0: 14 == 14
+
+Liaison entre la station 6 et la station 38
+em de 6 --> rc de 38: 280 == 280
+em de 38 --> rc de 6: 14 == 14
+
+Liaison entre la station 7 et la station 11
+em de 7 --> rc de 11: 280 == 280
+em de 11 --> rc de 7: 14 == 14
+
+Liaison entre la station 13 et la station 22
+em de 13 --> rc de 22: 280 == 280
+em de 22 --> rc de 13: 14 == 14
+
+Liaison entre la station 14 et la station 31
+em de 14 --> rc de 31: 14 == 14
+em de 31 --> rc de 14: 280 == 280
+
+Liaison entre la station 32 et la station 36
+em de 32 --> rc de 36: 84 == 84
+em de 36 --> rc de 32: 350 == 350
+
+Liaison entre la station 37 et la station 42
+em de 37 --> rc de 42: 280 == 280
+em de 42 --> rc de 37: 14 == 14
+
+Station 0: em: 280, rc: 14, delta: 266
+Station 1: em: 14, rc: 280, delta: 266
+Station 2: em: 14, rc: 280, delta: 266
+Station 3: em: 350, rc: 84, delta: 266
+Station 4: em: 350, rc: 84, delta: 266
+Station 5: em: 350, rc: 84, delta: 266
+Station 6: em: 280, rc: 14, delta: 266
+Station 7: em: 280, rc: 14, delta: 266
+Station 8: em: 14, rc: 280, delta: 266
+Station 9: em: 14, rc: 280, delta: 266
+Station 10: em: 14, rc: 280, delta: 266
+Station 11: em: 14, rc: 280, delta: 266
+Station 12: em: 14, rc: 280, delta: 266
+Station 13: em: 280, rc: 14, delta: 266
+Station 14: em: 14, rc: 280, delta: 266
+Station 15: em: 14, rc: 280, delta: 266
+Station 16: em: 280, rc: 14, delta: 266
+Station 17: em: 14, rc: 280, delta: 266
+Station 18: em: 350, rc: 84, delta: 266
+Station 19: em: 280, rc: 14, delta: 266
+Station 20: em: 350, rc: 84, delta: 266
+Station 21: em: 280, rc: 14, delta: 266
+Station 22: em: 14, rc: 280, delta: 266
+Station 23: em: 14, rc: 280, delta: 266
+Station 24: em: 14, rc: 280, delta: 266
+Station 25: em: 84, rc: 350, delta: 266
+Station 26: em: 14, rc: 280, delta: 266
+Station 27: em: 350, rc: 84, delta: 266
+Station 28: em: 14, rc: 280, delta: 266
+Station 29: em: 84, rc: 350, delta: 266
+Station 30: em: 84, rc: 350, delta: 266
+Station 31: em: 280, rc: 14, delta: 266
+Station 32: em: 84, rc: 350, delta: 266
+Station 33: em: 280, rc: 14, delta: 266
+Station 34: em: 280, rc: 14, delta: 266
+Station 35: em: 280, rc: 14, delta: 266
+Station 36: em: 350, rc: 84, delta: 266
+Station 37: em: 280, rc: 14, delta: 266
+Station 38: em: 14, rc: 280, delta: 266
+Station 39: em: 280, rc: 14, delta: 266
+Station 40: em: 280, rc: 14, delta: 266
+Station 41: em: 14, rc: 280, delta: 266
+Station 42: em: 14, rc: 280, delta: 266
+Station 43: em: 350, rc: 84, delta: 266
+Station 44: em: 14, rc: 280, delta: 266
+Station 45: em: 280, rc: 14, delta: 266
+Station 46: em: 350, rc: 84, delta: 266
+Station 47: em: 280, rc: 14, delta: 266
+Station 48: em: 280, rc: 14, delta: 266
+Station 49: em: 14, rc: 280, delta: 266

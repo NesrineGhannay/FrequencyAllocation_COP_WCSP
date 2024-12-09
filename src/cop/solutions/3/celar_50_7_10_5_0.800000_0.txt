@@ -1,0 +1,75 @@
+Valeur de la fonction objectif: 280
+Fréquences utilisées: {280, 294, 42, 14, 56, 252}
+Durée d'exécution: 1.5381579399108887 secondes
+
+, Solveur: ACE
+Liaison entre la station 0 et la station 4
+em de 0 --> rc de 4: 14 == 14
+em de 4 --> rc de 0: 252 == 252
+
+Liaison entre la station 5 et la station 48
+em de 5 --> rc de 48: 252 == 252
+em de 48 --> rc de 5: 14 == 14
+
+Liaison entre la station 15 et la station 19
+em de 15 --> rc de 19: 14 == 14
+em de 19 --> rc de 15: 252 == 252
+
+Liaison entre la station 19 et la station 42
+em de 19 --> rc de 42: 252 == 252
+em de 42 --> rc de 19: 14 == 14
+
+Liaison entre la station 27 et la station 39
+em de 27 --> rc de 39: 14 == 14
+em de 39 --> rc de 27: 252 == 252
+
+Station 0: em: 14, rc: 252, delta: 238
+Station 1: em: 14, rc: 252, delta: 238
+Station 2: em: 14, rc: 252, delta: 238
+Station 3: em: 14, rc: 252, delta: 238
+Station 4: em: 252, rc: 14, delta: 238
+Station 5: em: 252, rc: 14, delta: 238
+Station 6: em: 56, rc: 294, delta: 238
+Station 7: em: 56, rc: 294, delta: 238
+Station 8: em: 14, rc: 252, delta: 238
+Station 9: em: 14, rc: 252, delta: 238
+Station 10: em: 14, rc: 252, delta: 238
+Station 11: em: 252, rc: 14, delta: 238
+Station 12: em: 14, rc: 252, delta: 238
+Station 13: em: 252, rc: 14, delta: 238
+Station 14: em: 252, rc: 14, delta: 238
+Station 15: em: 14, rc: 252, delta: 238
+Station 16: em: 56, rc: 294, delta: 238
+Station 17: em: 14, rc: 252, delta: 238
+Station 18: em: 42, rc: 280, delta: 238
+Station 19: em: 252, rc: 14, delta: 238
+Station 20: em: 56, rc: 294, delta: 238
+Station 21: em: 252, rc: 14, delta: 238
+Station 22: em: 252, rc: 14, delta: 238
+Station 23: em: 42, rc: 280, delta: 238
+Station 24: em: 14, rc: 252, delta: 238
+Station 25: em: 14, rc: 252, delta: 238
+Station 26: em: 42, rc: 280, delta: 238
+Station 27: em: 14, rc: 252, delta: 238
+Station 28: em: 14, rc: 252, delta: 238
+Station 29: em: 252, rc: 14, delta: 238
+Station 30: em: 252, rc: 14, delta: 238
+Station 31: em: 56, rc: 294, delta: 238
+Station 32: em: 252, rc: 14, delta: 238
+Station 33: em: 252, rc: 14, delta: 238
+Station 34: em: 252, rc: 14, delta: 238
+Station 35: em: 280, rc: 42, delta: 238
+Station 36: em: 252, rc: 14, delta: 238
+Station 37: em: 14, rc: 252, delta: 238
+Station 38: em: 14, rc: 252, delta: 238
+Station 39: em: 252, rc: 14, delta: 238
+Station 40: em: 56, rc: 294, delta: 238
+Station 41: em: 14, rc: 252, delta: 238
+Station 42: em: 14, rc: 252, delta: 238
+Station 43: em: 14, rc: 252, delta: 238
+Station 44: em: 252, rc: 14, delta: 238
+Station 45: em: 42, rc: 280, delta: 238
+Station 46: em: 294, rc: 56, delta: 238
+Station 47: em: 252, rc: 14, delta: 238
+Station 48: em: 14, rc: 252, delta: 238
+Station 49: em: 14, rc: 252, delta: 238
