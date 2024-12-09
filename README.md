@@ -27,14 +27,20 @@ Ce projet explore des méthodes avancées pour résoudre des problèmes d'**allo
 - **`src/`**  
   Regroupe les scripts pour modéliser et résoudre les problèmes :
   - **`cop/`** : Dossier où se trouve le code nécessaire pour modéliser et résoudre les instances COP.  
+    - **`solutions/`** : Répertoire où se trouve le résultat de chaque résolution faites avec COP. Il contient trois sous-répertoires :
+      - **`1/`** : Répertoire où se trouve le résultat de chaque résolution pour le problème de minimisation du nombre de fréquences utilisées.
+      - **`2/`** : Répertoire où se trouve le résultat de chaque résolution pour le problème d'utilisation des fréquences les plus basses.
+      - **`3/`** : Répertoire où se trouve le résultat de chaque résolution pour le problème de minimisation de la bande des fréqunces utilisées.
+    - **`instances/`** : Répertoire contenant les instances au format xml générées par le script `scop_freq_alloc.py`.
     - **`scop_freq_alloc.py`** : Script principal pour modéliser et résoudre les instances COP.
+  Il faut noter que les solutions contenues dans les répertoires listés précédemment ont été obtenues en utilisant le solveur ACE
   - **`vcsp/`** : Dossier où se trouve le code nécessaire pour modéliser et résoudre les instances WCSP, ainsi que les fichiers générés pour et par Toulbar2.
     - **`solutions/`** : Répertoire où se trouve le résultat de chaque résolution faites avec WCSP.
     - **`instances/`** : Répertoire contenant les instances au format WCSP générées par le script `wcsp.py` pour la résolution par Toolbar2.
     - **`wcsp.py`** : Script Python pour générer et résoudre les instances WCSP avec la bibliothèque `pytoulbar2`.
 
 - **`run_cop.sh`**  
-  Script Bash pour lancer les solveurs sur les instances COP.
+  Script Bash pour lancer les solveurs sur les instances COP et enregistrer les résultats dans les fichiers correspondants.
 
 - **`wcsp_experiments.ipynb`**  
   Notebook pour expérimenter avec les méthodes WCSP, incluant la visualisation des performances.
@@ -49,6 +55,14 @@ Installer Python et les librairies nécessaires :
    pip install pycsp3 pytoulbar2
    ```
 ### **Résolution COP**
+Pour résoudre les instances fournies dans le répertoire **`donnees_cop/`** il faut utiliser le script **`run_cop.sh`**
+qui permet de lancer la résolution en série des instances COP avec ACE ou CHOCO et sauvegarder les résultats dans les fichiers
+du répertoire **`src/cop/solutions/`**.
+    ```bash
+    ./run_cop.sh
+    ```
+Pour changer le solveur utilisé ou le problème d'optimisation ou encore le temps d'exécution maximale, il suffit de modifier les variables **`SOLVER`** ,
+**`PROBLEM`** et **`TIMEOUT`** dans le script **`run_cop.sh`**.
 
 
 ### **Résolution WCSP**  
@@ -75,5 +89,6 @@ Pour résoudre une instance du problème en utilisant le format WCSP :
 ## **Références**  
 
 - **Toulbar2** : [https://github.com/toulbar2/toulbar2](https://github.com/toulbar2/toulbar2)   
+- **PyCSP3** : [https://pycsp.org/](https://pycsp.org/)
 
 ---  
